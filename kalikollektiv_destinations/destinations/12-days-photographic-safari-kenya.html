@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>12 Days Photographic Safari Kenya · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="12 Days Photographic Safari Kenya" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>12 Days Photographic Safari Kenya</h1>
+    <div class="meta">
+      <span>📅 12 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Embark on a 12-day odyssey through the enchanting landscapes of Kenya, a journey that seamlessly blends wildlife exploration, cultural immersion, and breathtaking scenery. Commencing in Nairobi, our adventure unfolds with a visit to the National Museum's bird gallery before setting out on a scenic drive to Lake Naivasha, offering panoramic views of Mt. Suswa and Mt. Longonot. From the geothermal wonders of Hell's Gate National Park to the picturesque shores of Lake Baringo, each day promises unique encounters, whether observing flamingoes or experiencing the vibrant life around freshwater lakes. As the expedition winds through Iten, Kisumu, and the shores of Lake Victoria, optional excursions to Kakamega forest or Rusinga Island beckon. The journey crescendos in the iconic Maasai Mara Game Reserve, where the majesty of wildlife, cultural experiences, and the option for a hot air balloon adventure awaits. This comprehensive exploration culminates in Nairobi, leaving indelible memories of Kenya's diverse landscapes and vibrant tapestry of life.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Nairobi</div><div class='db'>On arrival at the airport, you will be met by our representative for transfer to your hotel. Later in the day head out to the National Museum’s bird gallery for familiarization with some of the bird species endemic to Kenya that are on display. Pass by a restaurant for early dinner before returning to the hotel for the night.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Naivasha</div><div class='db'>After breakfast, we depart from our Nairobi hotel for a scenic drive along the Great North Road to Lake Naivasha, stopping at the various viewpoints for a panoramic view of the valley with picturesque views of Mt. Suswa and the dormant Mt. Longonot. Arrive at Lake Naivasha mid-morning and enjoy a walk along the lake shores for an opportunity to see birds and other animals. Lake Naivasha, being fresh water is home to an incredible variety of species. Over 450 species have been recorded here. Enjoy your lunch at your lodge/camp. In the afternoon you can either take a boat ride on the lake or visit the nearby Hell’s Gate Park. Named for the intense geothermal activity within its boundaries, the Hell's Gate National Park is a remarkable quarter of the Great Rift Valley. Spectacular scenery including the towering cliffs, water-gouged gorges, stark rock towers, scrub-clad volcanoes and belching plumes of geothermal steam make it one of the most atmospheric Parks in Africa. The park is home to a great biodiversity creating habitats for several species of birds including raptors. Visitors can enjoy mountain biking, rock climbing and a natural spa.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Lake Baringo National Park</div><div class='db'>Today, take a leisurely drive through one of Kenya’s most scenic routes towards the northern rift valley lakes of Bogoria and Baringo. Arrive at lunchtime at Lake Bogoria and have a picnic. Later walk along the shores of Lake Bogoria with its numerous hot springs & geysers coming straight from underneath the ground. The Loburu hot springs are super-heated bubbles of mud that are estimated to be in excess of 300 degrees, other geysers shoot steam up to 3 meters high. The lake also provides you with the opportunity to see millions of flamingoes that live there. Later in the evening drive to Lake Baringo This beautiful, magnificently scenic region lies to the north of Nakuru and is a land of surprises.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Lake Baringo National Park</div><div class='db'>After breakfast, you will have beautiful views of the lake and the islands in the changing light of the sunrise. Lake Baringo is the second freshwater lake in the Rift Valley after Lake Naivasha and is the highest at 970 m above sea level. There are over 450 species of birds in and around the lake area. Crocodiles and hippos are also frequently spotted with the latter coming out at night in many places to graze ashore. Here is one of the best places to photograph Squacco heron, Goliath heron and purple heron. On the lake are local fishermen who paddle around in their balsa wood boats and fish Tilapia. Perhaps you would like to experience a special spectacle and buy a fish from one of the fishermen, then look out for African fish Eagles, which are usually found in pairs on the banks and on the islands. When you have tracked the big birds, the fisherman will raise the fish from the boat - and the fish eagle will try to catch the fish.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Kerio Valley National Park</div><div class='db'>Leave after breakfast and take one of the most scenic routes in Kenya enjoying great views of Lake Baringo, stop over at Cheploch Gorge where the river Kerio slices through the rocks, here you get an amazing opportunity to take great pictures. Arrive for lunch at Kerio View Hotel in Iten – home to numerous Olympic champions. Set like jewels on the Baringo Valley floor are Lakes Baringo and Bogoria. They are only a few kilometers apart with Bogoria higher by only 20 m. Some believe they were once linked together. However, presently they are very different indeed in their character and attractions. Baringo is one of only two fresh-water lakes in this region (the other being Naivasha), whereas Bogoria is strongly alkaline. Driving towards Kabarnet, abruptly, at the first hairpin bend, 500m beyond Iten, a magnificent view of the Kerio Valley opens up before your eyes. The prominent line of hills to the east running parallel to the Keiyo Escarpment you are now about to descend, is the Tugen Hills. At the northern end of this range is the fine pyramidal shape of Tiati, the sacred mountain of the Pokot people. At the Kolol viewpoint, you will see the 200m Torok waterfall. North of the lakes are the cones of several extinct volcanoes. One of them is Silali, from the side of which bubbles a river of almost boiling water — the Suguta River, which flows north, gradually descending, into the infamous Suguta Valley of Turkana, where the warm and highly saline water dissipates into the rocks and arid dust. Northern Suguta is one of the most inhospitable places on earth and is separated from Lake Turkana by only a narrow barrier of solidified lava. This is the lowest point of the Great Rift in Kenya.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Kisumu</div><div class='db'>Visit the training ground for Kenya’s World beating champions before departing for Kisumu, declared by the UN as the World’s Millenium City. Enjoy lunch and a relaxed evening on the shores of Africa’s largest freshwater lake and the source of the great river Nile.</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Kisumu</div><div class='db'>Optional visit to Kakamega forest for a day’s excursion or transfer to Rusinga island to spend time on the shores away from the city. Explore, discover and experience magical moments at Kakamega Forest Reserve, in Kakamega County, Kenya. The forest covers about 240 square kilometres and is a remnant of the Guineo-Congolian Forest ecosystem that once stretched across West Africa. It is home to over 400 species of butterflies, 27 species of snakes, rainforest animals and over 360 species of birds, some of which are found nowhere else in the country, such as the Black-billed Turaco, Blue-headed Bee-eater, Turner's Eremomela and Grey Parrots. Known as "The Canopy of Natural Beauty", it is a paradise for bird watching, hiking and climbing, with various scenic spots, waterfalls and adventurous nature trails.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Kisumu</div><div class='db'>Spend your day relaxing by the shores or enjoy the optional numerous water activities and visits to other islands for sightseeing.</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>Travel to Maasai Mara Game Reserve, so named to mean the “spotted plains” in Maasai language. This is home to the greatest concentration of large mammals and is widely recognized as Africa’s ultimate wildlife reserve. The park is the northern extension to the vast Serengeti-Mara ecosystem, famous for its annual migration of wildebeest. Transfer to the lodge with a game drive en route and after check-in enjoy a hot lunch. Later in the evening enjoy a game viewing drive in this spectacular place of breathtaking scenery, never-ending plains and the most abundant variety of wildlife remaining anywhere in the world. The landscape is made up of rolling savannahs dotted with patchy shrubs and bush thickets.</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>During your stay, explore this great reserve in depth. You may see elephants, giraffes, prides of lions, and thousands of impalas, topi, Grants and Thomson's gazelle. Birds are prolific including immigrants, 450 bird species have been recorded among them 57 birds of prey. The Mara is the scene of the annual migration of millions of wildebeest up from the Serengeti plains in search of water and grasses. isit a Maasai tribal v Village and enjoy entertainment by Maasai dancers. While in Mara, you will have the option to float above the Mara-Serengeti ecosystem on board a hot air balloon followed by a gourmet champagne breakfast (Options at an extra cost).</div></div>
+</div><div class="day">
+  <div class="dn">11</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>Spend another exciting day exploring the Masai Mara on game drives to see the regions abundant wildlife.</div></div>
+</div><div class="day">
+  <div class="dn">12</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>After an early morning game drive and breakfast, before heading to Nairobi arriving for late lunch before transferring to the airport for flight home. Please enter your email address and/or telephone number.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 12 Days Photographic Safari Kenya" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/3821ecef-0a61-4123-b2d3-6496725c83bc?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

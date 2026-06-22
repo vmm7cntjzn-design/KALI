@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 Days Lake Turkana Adventure · Adventure Expeditions · KALI Kollektiv</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Calibri',sans-serif; background:#0D1B2A; color:#F5F0E8; }
+a { color:#0A7B83; text-decoration:none; }
+a:hover { color:#12a5af; }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(13,27,42,0.95); backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 48px; height:64px; border-bottom:1px solid rgba(10,123,131,0.3); }
+nav .logo { font-family:Georgia,serif; font-size:18px; font-weight:700;
+  color:#F5F0E8; letter-spacing:.05em; }
+nav .logo span { color:#0A7B83; }
+nav ul { list-style:none; display:flex; gap:32px; }
+nav ul li a { font-size:13px; font-weight:600; color:#BBBBBB; letter-spacing:.08em;
+  text-transform:uppercase; transition:color .2s; }
+nav ul li a:hover, nav ul li a.active { color:#0A7B83; }
+
+/* HERO */
+.hero { position:relative; height:70vh; min-height:400px; overflow:hidden; margin-top:64px; }
+.hero img { width:100%; height:100%; object-fit:cover; }
+.hero::after { content:''; position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(13,27,42,0.2) 0%, rgba(13,27,42,0.8) 100%); }
+.hero-content { position:absolute; bottom:0; left:0; right:0; padding:40px 64px; z-index:2; }
+.hero-badge { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.1em;
+  text-transform:uppercase; color:#0A7B83; border:1px solid #0A7B83;
+  padding:4px 12px; border-radius:20px; margin-bottom:12px; }
+.hero-title { font-family:Georgia,serif; font-size:clamp(28px,4vw,52px);
+  font-weight:400; color:#F5F0E8; line-height:1.15; margin-bottom:12px; }
+.hero-meta { font-size:13px; color:#BBBBBB; display:flex; gap:24px; flex-wrap:wrap; }
+.hero-meta span { display:flex; align-items:center; gap:6px; }
+
+/* CONTENT */
+.container { max-width:1100px; margin:0 auto; padding:0 48px; }
+section { padding:56px 0; border-bottom:1px solid rgba(245,240,232,0.08); }
+section:last-child { border-bottom:none; }
+.section-label { font-size:11px; font-weight:700; letter-spacing:.15em;
+  text-transform:uppercase; color:#0A7B83; margin-bottom:20px; }
+h2 { font-family:Georgia,serif; font-size:28px; font-weight:400; margin-bottom:20px; }
+p { font-size:15px; line-height:1.75; color:#BBBBBB; max-width:720px; }
+
+/* ITINERARY */
+.itin-grid { display:flex; flex-direction:column; gap:0; }
+.itin-day { display:grid; grid-template-columns:60px 1fr;
+  gap:0 24px; padding:20px 0; border-bottom:1px solid rgba(245,240,232,0.06); }
+.itin-day:last-child { border-bottom:none; }
+.day-num { font-family:Georgia,serif; font-size:22px; color:#0A7B83;
+  font-weight:400; padding-top:2px; }
+.day-title { font-size:15px; font-weight:600; color:#F5F0E8; margin-bottom:6px; }
+.day-body { font-size:13px; line-height:1.7; color:#94a3b8; }
+
+/* INCLUDES */
+.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 32px; }
+.inc-item { display:flex; gap:10px; align-items:flex-start;
+  font-size:13px; color:#BBBBBB; line-height:1.5; }
+.inc-dot { color:#0A7B83; font-size:10px; margin-top:4px; flex-shrink:0; }
+.exc-dot { color:#ef4444; font-size:10px; margin-top:4px; flex-shrink:0; }
+
+/* ACCOMMODATION */
+.acc-grid { display:flex; flex-wrap:wrap; gap:12px; }
+.acc-tag { background:rgba(10,123,131,0.12); border:1px solid rgba(10,123,131,0.3);
+  color:#F5F0E8; padding:6px 16px; border-radius:20px; font-size:13px; }
+
+/* PRICE */
+.price-box { background:rgba(10,123,131,0.08); border:1px solid rgba(10,123,131,0.2);
+  border-radius:12px; padding:28px 32px; display:inline-block; }
+.price-from { font-size:12px; color:#BBBBBB; letter-spacing:.08em;
+  text-transform:uppercase; margin-bottom:6px; }
+.price-val { font-family:Georgia,serif; font-size:32px; color:#0A7B83; }
+.price-note { font-size:12px; color:#64748b; margin-top:8px; }
+
+/* CTA */
+.cta-section { text-align:center; padding:72px 0; }
+.cta-title { font-family:Georgia,serif; font-size:32px; margin-bottom:16px; }
+.cta-sub { font-size:15px; color:#BBBBBB; margin-bottom:32px; }
+.btn { display:inline-block; background:#0A7B83; color:#fff; font-size:14px;
+  font-weight:600; padding:14px 32px; border-radius:6px; transition:background .2s; }
+.btn:hover { background:#12a5af; color:#fff; }
+.btn-outline { background:transparent; border:2px solid #0A7B83; color:#0A7B83;
+  margin-left:12px; }
+.btn-outline:hover { background:#0A7B83; color:#fff; }
+
+/* FOOTER */
+footer { background:rgba(0,0,0,0.3); text-align:center; padding:32px;
+  font-size:12px; color:#64748b; }
+</style>
+
+</head>
+<body>
+
+<nav>
+  <div class="logo">KALI <span>KOLLEKTIV</span></div>
+  <ul>
+    <li><a href="/portfolio.html">Portfolio</a></li>
+    <li><a href="/destinations/" class="active">Destinations</a></li>
+    <li><a href="/experiences.html">Experiences</a></li>
+    <li><a href="/about.html">About KALI</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <img src="https://wetu.com/ImageHandler/c1920x1080/Itineraries/8488327D-A8E0-4E86-9AC9-63232C9294E1/landing_page.png" alt="07 Days Lake Turkana Adventure" loading="eager">
+  <div class="hero-content">
+    <div class="hero-badge">Adventure Expeditions · Kenia</div>
+    <h1 class="hero-title">07 Days Lake Turkana Adventure</h1>
+    <div class="hero-meta">
+      <span>📅 7 Tage</span>
+      <span>💰 ab 2.357 USD pp</span>
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <section>
+    <div class="section-label">Überblick</div>
+    <h2>Die Reise</h2>
+    <p>Embark on a captivating 7-day adventure around Lake Turkana, starting with a morning flight from Nairobi to Lodwar. Upon arrival, you'll be greeted by a representative and driven to Eliye Springs on the shores of Lake Turkana, the world's largest desert lake known as the cradle of mankind. Stay at the Eliye Springs Resort, experiencing traditional Turkana culture and visiting the fishing village of Longelech. Explore Nariokotome, home to the Turkana boy fossil site, and visit Kalokol, a center for Turkana fishermen. Venture to Central Island National Park with its volcanic crater lakes and Nile Crocodile breeding grounds. Relax on the beach or opt for a bird watching tour on Central Island. Head to Moite to discover the El Molo ethnic group, exclusive traditional fishermen, and visit their sacred shrine. Spend your last day enjoying the beach, sun, and optional activities like a massage or fishing trip. Conclude your unforgettable journey with a boat trip and Sundowner before departing from Lodwar to Nairobi on day 7.</p>
+  </section>
+
+  <section><div class="section-label">Reiseverlauf</div><h2>Tag für Tag</h2><div class="itin-grid">
+        <div class="itin-day">
+          <div class="day-num">01</div>
+          <div>
+            <div class="day-title">Lake Turkana</div>
+            
+          </div>
+        </div>
+        <div class="itin-day">
+          <div class="day-num">02</div>
+          <div>
+            <div class="day-title">Lake Turkana</div>
+            
+          </div>
+        </div>
+        <div class="itin-day">
+          <div class="day-num">03</div>
+          <div>
+            <div class="day-title">Lake Turkana</div>
+            
+          </div>
+        </div>
+        <div class="itin-day">
+          <div class="day-num">04</div>
+          <div>
+            <div class="day-title">Lake Turkana</div>
+            
+          </div>
+        </div>
+        <div class="itin-day">
+          <div class="day-num">05</div>
+          <div>
+            <div class="day-title">Lake Turkana</div>
+            
+          </div>
+        </div>
+        <div class="itin-day">
+          <div class="day-num">06</div>
+          <div>
+            <div class="day-title">Lake Turkana</div>
+            
+          </div>
+        </div>
+        <div class="itin-day">
+          <div class="day-num">07</div>
+          <div>
+            <div class="day-title">End of Itinerary</div>
+            
+          </div>
+        </div></div></section>
+
+  <section><div class="section-label">Leistungen</div><h2>Inklusive</h2><div class="inc-grid"><div class="inc-item"><span class="inc-dot">●</span>Accommodation and meals as stipulated in the itinerary.</div><div class="inc-item"><span class="inc-dot">●</span>Transport in a chauffeur driven Land Cruiser.</div><div class="inc-item"><span class="inc-dot">●</span>All mentioned excursions</div><div class="inc-item"><span class="inc-dot">●</span>Services of an English-speaking driver-guide.</div><div class="inc-item"><span class="inc-dot">●</span>Domestic flights</div><div class="inc-item"><span class="inc-dot">●</span>All Government taxes and levies.</div><div class="inc-item"><span class="inc-dot">●</span>All arrival and departure transfers.</div></div></section>
+
+  <section><div class="section-label">Nicht enthalten</div><div class="inc-grid"><div class="inc-item"><span class="exc-dot">●</span>Visa fees and travel insurance.</div><div class="inc-item"><span class="exc-dot">●</span>Tips and gratuities to hotel, lodges, camp staff and driver- guide(s)</div><div class="inc-item"><span class="exc-dot">●</span>Alcoholic and non-alcoholic drinks.</div><div class="inc-item"><span class="exc-dot">●</span>Any local or international flight and departure taxes.</div><div class="inc-item"><span class="exc-dot">●</span>Holiday supplements over Easter, Christmas, and New Year.</div><div class="inc-item"><span class="exc-dot">●</span>Laundry services.</div><div class="inc-item"><span class="exc-dot">●</span>Any other item(s) not included in our itinerary.</div><div class="inc-item"><span class="exc-dot">●</span>Lake Turkana:</div></div></section>
+
+  <section><div class="section-label">Unterkünfte</div><h2>Wo Sie übernachten</h2><div class="acc-grid"><span class="acc-tag">Eliye Springs Resort</span></div></section>
+
+  <section><div class="section-label">Preise 2026</div><div class="price-box"><div class="price-from">Preis ab</div><div class="price-val">ab 2.357 USD pp</div><div class="price-note">Preise auf Anfrage · Saisonale Unterschiede möglich</div></div></section>
+
+  <section class="cta-section">
+    <div class="section-label">Interesse geweckt?</div>
+    <h2 class="cta-title">Diese Reise anfragen</h2>
+    <p class="cta-sub">Wir beraten Sie gerne und erstellen ein individuelles Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 07 Days Lake Turkana Adventure" class="btn">Jetzt anfragen</a>
+    <a href="https://wetu.com/Itinerary/Landing/b0bb6321-12dd-4b88-8df8-cb8466753832?oid=59542" target="_blank" class="btn btn-outline">Vollständiges Itinerary</a>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 KALI Kollektiv · Beyond the Map · Berlin ·
+  <a href="mailto:carl@kalikollektiv.de">carl@kalikollektiv.de</a>
+</footer>
+
+</body>
+</html>

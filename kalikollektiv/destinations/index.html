@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Destinations · KALI Kollektiv</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Calibri',sans-serif; background:#0D1B2A; color:#F5F0E8; }
+a { color:#0A7B83; text-decoration:none; }
+a:hover { color:#12a5af; }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(13,27,42,0.95); backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 48px; height:64px; border-bottom:1px solid rgba(10,123,131,0.3); }
+nav .logo { font-family:Georgia,serif; font-size:18px; font-weight:700;
+  color:#F5F0E8; letter-spacing:.05em; }
+nav .logo span { color:#0A7B83; }
+nav ul { list-style:none; display:flex; gap:32px; }
+nav ul li a { font-size:13px; font-weight:600; color:#BBBBBB; letter-spacing:.08em;
+  text-transform:uppercase; transition:color .2s; }
+nav ul li a:hover, nav ul li a.active { color:#0A7B83; }
+
+/* HERO */
+.hero { position:relative; height:70vh; min-height:400px; overflow:hidden; margin-top:64px; }
+.hero img { width:100%; height:100%; object-fit:cover; }
+.hero::after { content:''; position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(13,27,42,0.2) 0%, rgba(13,27,42,0.8) 100%); }
+.hero-content { position:absolute; bottom:0; left:0; right:0; padding:40px 64px; z-index:2; }
+.hero-badge { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.1em;
+  text-transform:uppercase; color:#0A7B83; border:1px solid #0A7B83;
+  padding:4px 12px; border-radius:20px; margin-bottom:12px; }
+.hero-title { font-family:Georgia,serif; font-size:clamp(28px,4vw,52px);
+  font-weight:400; color:#F5F0E8; line-height:1.15; margin-bottom:12px; }
+.hero-meta { font-size:13px; color:#BBBBBB; display:flex; gap:24px; flex-wrap:wrap; }
+.hero-meta span { display:flex; align-items:center; gap:6px; }
+
+/* CONTENT */
+.container { max-width:1100px; margin:0 auto; padding:0 48px; }
+section { padding:56px 0; border-bottom:1px solid rgba(245,240,232,0.08); }
+section:last-child { border-bottom:none; }
+.section-label { font-size:11px; font-weight:700; letter-spacing:.15em;
+  text-transform:uppercase; color:#0A7B83; margin-bottom:20px; }
+h2 { font-family:Georgia,serif; font-size:28px; font-weight:400; margin-bottom:20px; }
+p { font-size:15px; line-height:1.75; color:#BBBBBB; max-width:720px; }
+
+/* ITINERARY */
+.itin-grid { display:flex; flex-direction:column; gap:0; }
+.itin-day { display:grid; grid-template-columns:60px 1fr;
+  gap:0 24px; padding:20px 0; border-bottom:1px solid rgba(245,240,232,0.06); }
+.itin-day:last-child { border-bottom:none; }
+.day-num { font-family:Georgia,serif; font-size:22px; color:#0A7B83;
+  font-weight:400; padding-top:2px; }
+.day-title { font-size:15px; font-weight:600; color:#F5F0E8; margin-bottom:6px; }
+.day-body { font-size:13px; line-height:1.7; color:#94a3b8; }
+
+/* INCLUDES */
+.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 32px; }
+.inc-item { display:flex; gap:10px; align-items:flex-start;
+  font-size:13px; color:#BBBBBB; line-height:1.5; }
+.inc-dot { color:#0A7B83; font-size:10px; margin-top:4px; flex-shrink:0; }
+.exc-dot { color:#ef4444; font-size:10px; margin-top:4px; flex-shrink:0; }
+
+/* ACCOMMODATION */
+.acc-grid { display:flex; flex-wrap:wrap; gap:12px; }
+.acc-tag { background:rgba(10,123,131,0.12); border:1px solid rgba(10,123,131,0.3);
+  color:#F5F0E8; padding:6px 16px; border-radius:20px; font-size:13px; }
+
+/* PRICE */
+.price-box { background:rgba(10,123,131,0.08); border:1px solid rgba(10,123,131,0.2);
+  border-radius:12px; padding:28px 32px; display:inline-block; }
+.price-from { font-size:12px; color:#BBBBBB; letter-spacing:.08em;
+  text-transform:uppercase; margin-bottom:6px; }
+.price-val { font-family:Georgia,serif; font-size:32px; color:#0A7B83; }
+.price-note { font-size:12px; color:#64748b; margin-top:8px; }
+
+/* CTA */
+.cta-section { text-align:center; padding:72px 0; }
+.cta-title { font-family:Georgia,serif; font-size:32px; margin-bottom:16px; }
+.cta-sub { font-size:15px; color:#BBBBBB; margin-bottom:32px; }
+.btn { display:inline-block; background:#0A7B83; color:#fff; font-size:14px;
+  font-weight:600; padding:14px 32px; border-radius:6px; transition:background .2s; }
+.btn:hover { background:#12a5af; color:#fff; }
+.btn-outline { background:transparent; border:2px solid #0A7B83; color:#0A7B83;
+  margin-left:12px; }
+.btn-outline:hover { background:#0A7B83; color:#fff; }
+
+/* FOOTER */
+footer { background:rgba(0,0,0,0.3); text-align:center; padding:32px;
+  font-size:12px; color:#64748b; }
+</style>
+
+<style>
+.page-header { padding:80px 0 40px; text-align:center; }
+.page-header h1 { font-family:Georgia,serif; font-size:42px; font-weight:400; margin-bottom:12px; }
+.page-header p { font-size:16px; color:#BBBBBB; max-width:560px; margin:0 auto; }
+.tour-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:24px; padding:40px 0 80px; }
+.tour-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px; overflow:hidden; text-decoration:none; transition:transform .2s,border-color .2s; }
+.tour-card:hover { transform:translateY(-4px); border-color:rgba(10,123,131,0.4); }
+.card-img { height:200px; background-size:cover; background-position:center; }
+.card-body { padding:20px; }
+.card-badge { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:#0A7B83; margin-bottom:8px; }
+.card-title { font-family:Georgia,serif; font-size:18px; color:#F5F0E8;
+  line-height:1.3; margin-bottom:10px; }
+.card-meta { display:flex; gap:16px; font-size:12px; color:#BBBBBB; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">KALI <span>KOLLEKTIV</span></div>
+  <ul>
+    <li><a href="/portfolio.html">Portfolio</a></li>
+    <li><a href="/destinations/" class="active">Destinations</a></li>
+    <li><a href="/experiences.html">Experiences</a></li>
+    <li><a href="/about.html">About KALI</a></li>
+  </ul>
+</nav>
+<div class="container" style="padding-top:64px">
+  <div class="page-header">
+    <h1>Destinations</h1>
+    <p>Alle Adventure Expeditions Kenia-Touren — kuratiert von KALI Kollektiv.</p>
+  </div>
+  <div class="tour-grid">
+    <a href="13-days-discover-kenya-historic-railway-journey.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/29EE111F-31F6-4AC1-B624-2AE7793D8E10/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">13 Days Discover Kenya Historic Railway Journey</div>
+        <div class="card-meta">
+          <span>13 Tage</span>
+          <span>ab 1.227 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="07-days-family-safari-rift-valley-maasai-mara.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/16DEBB9D-7B5A-472C-B3B0-FF946248D43E/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">07 Days Family Safari Rift Valley & Maasai Mara</div>
+        <div class="card-meta">
+          <span>7 Tage</span>
+          <span>ab 424 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="05-days-maasai-mara-flight-safari.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/38FBE146-D47C-4029-A0C1-3FC86F7C32E8/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">05 Days Maasai Mara Flight Safari</div>
+        <div class="card-meta">
+          <span>5 Tage</span>
+          <span>ab 600 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="12-days-immerse-in-life-with-the-tribes.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/6049ECD8-3D73-475A-B7FA-7A1CBAE0118E/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">12 Days Immerse in Life with the Tribes</div>
+        <div class="card-meta">
+          <span>12 Tage</span>
+          <span>ab 3.229 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="10-days-kenya-starter.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/032EDB46-3ECC-4A0D-809F-FA0D0FB7C1DE/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Kenya Starter</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          <span>ab 15 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="12-days-photographic-safari-kenya.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/67CDFF2B-07E0-451F-BC6D-7F6B617164BB/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">12 Days Photographic Safari Kenya</div>
+        <div class="card-meta">
+          <span>12 Tage</span>
+          <span>ab 3.259 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="07-days-tour-de-kenya-cycling-safari.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/68E3A46E-0F69-4D70-86BF-B7068168C650/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">07 Days Tour de Kenya Cycling Safari</div>
+        <div class="card-meta">
+          <span>7 Tage</span>
+          <span>ab 2.345 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="12-days-classic-kenya-safari.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/161001/hotel-nairobi-kenya-14.jpg')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">12 Days Classic Kenya Safari</div>
+        <div class="card-meta">
+          <span>12 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="12-days-across-kenya.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/9E5F7695-34EA-4D17-835F-1CC698EDE000/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">12 Days across Kenya</div>
+        <div class="card-meta">
+          <span>12 Tage</span>
+          <span>ab 322 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="05-days-diani-beach-kilele-adventure.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/359632/tam_0412.jpg')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">05 Days Diani Beach Kilele Adventure</div>
+        <div class="card-meta">
+          <span>5 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="05-days-maasai-mara-safari.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/D2FAE9D4-BBFA-4525-9551-EB5F0DF61A60/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">05 Days Maasai Mara Safari</div>
+        <div class="card-meta">
+          <span>5 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="10-days-flying-safari-amboseli-northern-kenya.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/38FBE146-D47C-4029-A0C1-3FC86F7C32E8/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Flying Safari Amboseli & Northern Kenya</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          <span>ab 1.035 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="11-days-with-kenya-s-nomads.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/032EDB46-3ECC-4A0D-809F-FA0D0FB7C1DE/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">11 Days with Kenya's Nomads</div>
+        <div class="card-meta">
+          <span>11 Tage</span>
+          <span>ab 2.062 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="04-days-kayaking-on-ewaso-nyiro-river.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/6DCD926C-5750-4EBA-B952-9CF5CC142DAF/Landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">04 Days Kayaking on Ewaso Nyiro River</div>
+        <div class="card-meta">
+          <span>4 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="10-days-kenya-without-the-crowds.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/8B2CB100-7CBA-4551-8203-DBD610B1DD99/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Kenya Without the Crowds</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          <span>ab 584 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="08-days-classic-kenyan-safari-horizons.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/D2FAE9D4-BBFA-4525-9551-EB5F0DF61A60/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">08 Days Classic Kenyan Safari Horizons</div>
+        <div class="card-meta">
+          <span>8 Tage</span>
+          <span>ab 440 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="05-days-western-kenya.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/17B24DCA-6B41-4C79-BDD4-2F64068245B0/landing_page1.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">05 Days Western Kenya</div>
+        <div class="card-meta">
+          <span>6 Tage</span>
+          <span>ab 1.301 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="10-days-swahili-coast-lamu-dreams.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/495650B8-F58B-4A16-B8FD-D752B9E464AB/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Swahili Coast & Lamu Dreams</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          <span>ab 2.006 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="07-days-lake-turkana-adventure.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/8488327D-A8E0-4E86-9AC9-63232C9294E1/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">07 Days Lake Turkana Adventure</div>
+        <div class="card-meta">
+          <span>7 Tage</span>
+          <span>ab 2.357 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="08-days-laikipia-best-kept-secret.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/de6ac36f-65c2-4dd5-9df7-83615811bc6f/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">08 Days Laikipia Best Kept Secret</div>
+        <div class="card-meta">
+          <span>8 Tage</span>
+          <span>ab 2.275 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="10-days-maasai-wedding-and-honeymoon.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/4D3670E1-6F25-408F-BC4B-EEAF2978E65D/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Maasai Wedding and Honeymoon</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          <span>ab 2.059 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="07-days-flying-safari-rift-valley-maasai-mara.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/2B00FD08-4575-4CDA-855A-28313EF5413F/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">07 Days Flying Safari Rift Valley & Maasai Mara</div>
+        <div class="card-meta">
+          <span>8 Tage</span>
+          <span>ab 535 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="12-days-family-safari.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/161001/hotel-nairobi-kenya-14.jpg')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">12 Days Family Safari</div>
+        <div class="card-meta">
+          <span>14 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="14-days-explore-the-great-rift-valley-lakes.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/206AAA32-3095-4052-9AA6-88F383741843/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">14 Days Explore the Great Rift Valley Lakes</div>
+        <div class="card-meta">
+          <span>14 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="10-days-western-kenya-adventure.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/A1996572-5799-44FB-8758-C7EE3F5EF787/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Western Kenya Adventure</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="08-days-kenya-bush-and-north-coast.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/50097AF2-E915-42C2-9D54-71498779E954/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">08 Days Kenya Bush and North Coast</div>
+        <div class="card-meta">
+          <span>8 Tage</span>
+          <span>ab 484 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="08-days-bush-and-beach-diani-and-tsavo.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/032EDB46-3ECC-4A0D-809F-FA0D0FB7C1DE/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">08 Days Bush and Beach Diani and Tsavo</div>
+        <div class="card-meta">
+          <span>8 Tage</span>
+          <span>ab 339 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="04-days-train-safari-to-teita-estate.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/8488327D-A8E0-4E86-9AC9-63232C9294E1/landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">04 Days Train Safari to Teita Estate</div>
+        <div class="card-meta">
+          <span>4 Tage</span>
+          <span>ab 215 USD pp</span>
+        </div>
+      </div>
+    </a>
+    <a href="10-days-luxury-rail-safari-and-beach-holiday.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/C20A7D09-FC20-45ED-98A4-D5F67564AFA0/Landing_page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">10 Days Luxury Rail Safari and Beach Holiday</div>
+        <div class="card-meta">
+          <span>10 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="12-days-western-kenya-rift-valley.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/56323851-0541-4AB7-A61B-CFF5FB14912E/Landing page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">12 Days Western Kenya & Rift Valley</div>
+        <div class="card-meta">
+          <span>12 Tage</span>
+          
+        </div>
+      </div>
+    </a>
+    <a href="14-days-lake-victoria-three-country-circuit.html" class="tour-card">
+      <div class="card-img" style="background-image:url('https://wetu.com/ImageHandler/c1920x1080/Itineraries/CC313193-6D44-48B1-AC72-7FE985559D36/Landing page.png')"></div>
+      <div class="card-body">
+        <div class="card-badge">Adventure Expeditions · Kenia</div>
+        <div class="card-title">14 Days Lake Victoria Three-Country Circuit</div>
+        <div class="card-meta">
+          <span>14 Tage</span>
+          <span>ab 220 USD pp</span>
+        </div>
+      </div>
+    </a></div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin</footer>
+</body>
+</html>

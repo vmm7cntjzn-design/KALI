@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALI — Ostafrika Akquise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3" fill="#0f172a"/>
+          <path d="M8 1v3M8 12v3M1 8h3M12 8h3M3.22 3.22l2.12 2.12M10.66 10.66l2.12 2.12M12.78 3.22l-2.12 2.12M5.34 10.66l-2.12 2.12"
+            stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="brand-name">KALI</span>
+      <span class="brand-sub" id="sub-text"></span>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="nav-tab on" onclick="setPage('veranstalter', this)">Veranstalter</button>
+      <button class="nav-tab"   onclick="setPage('netzwerk', this)">Netzwerk</button>
+    </div>
+
+    <div class="topbar-right">
+      <button class="tbtn undo" id="undo-btn" onclick="undo()" disabled title="Rückgängig (Strg+Z)">↩ Rückgängig</button>
+      <span id="save-indicator" style="font-size:10px;color:#22c55e;font-weight:600">● Gespeichert</span>
+      <button class="tbtn" onclick="exportJSON()">Export</button>
+      <button class="tbtn" onclick="document.getElementById('import-file').click()" title="Tourdaten / kali_export.json manuell importieren">⬆ Importieren</button>
+      <button class="tbtn green" onclick="ladeVomServer()">↻ Aktualisieren</button>
+      <input type="file" id="import-file" accept=".json" style="display:none" onchange="importContent(this)">
+      <button class="tbtn" onclick="resetKALI()" style="color:#f87171;border-color:#f87171">⟳ Reset</button>
+      <button class="tbtn white" id="add-btn" onclick="zeigeNeuV()">+ Veranstalter</button>
+    </div>
+  </div>
+
+  <!-- PDF EDITOR OVERLAY -->
+  <div id="pdf-overlay" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.6);overflow:auto">
+    <div style="background:#fff;margin:20px auto;max-width:1100px;border-radius:12px;overflow:hidden;min-height:80vh">
+      <div style="background:#0f172a;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:14px;font-weight:700">PDF Editor</span>
+        <div style="display:flex;gap:8px">
+          <button onclick="printPDF('de')" style="font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid #334155;background:none;color:#cbd5e1;cursor:pointer">🖨 PDF erstellen</button>
+          <button onclick="closePDFEditor()" style="font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid #f87171;background:none;color:#f87171;cursor:pointer">✕ Schließen</button>
+        </div>
+      </div>
+      <div id="pdf-editor-content" style="display:grid;grid-template-columns:340px 1fr;min-height:calc(80vh - 52px)">
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="sidebar">
+      <div class="sb-top" id="sb-top"></div>
+      <div class="sb-list" id="sidebar-list"></div>
+    </div>
+    <div class="detail-col">
+      <div id="filter-bar-wrap"></div>
+      <div class="detail-wrap" id="detail-area"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js?v=1781599221"></script>
+<script src="app.js?v=1781599221"></script>
+<script src="matches.js?v=1781599221"></script>
+<script src="veranstalter.js?v=1781599221"></script>
+<script src="netzwerk.js?v=1781599221"></script>
+<script>
+let currentPage = 'veranstalter';
+
+function setPage(page, btn) {
+  currentPage = page;
+  aktiveTourId = null;
+  window.fDest = ''; window.fNiveau = ''; window.fTag = ''; window.fSuche = '';
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('on'));
+  btn.classList.add('on');
+  const addBtn = document.getElementById('add-btn');
+  if (page === 'veranstalter') {
+    addBtn.textContent = '+ Veranstalter';
+    addBtn.style.display = '';
+    addBtn.onclick = zeigeNeuV;
+  } else if (page === 'netzwerk') {
+    addBtn.textContent = '+ Operator';
+    addBtn.style.display = '';
+    addBtn.onclick = zeigeNeuOp;
+  } else {
+    addBtn.style.display = 'none';
+  }
+  render();
+}
+
+function render() {
+  updateSubtext();
+  if (currentPage === 'veranstalter') renderV();
+  else renderN();
+}
+
+laden();
+mergeDefaults();
+if (!kunden || kunden.length === 0) {
+  kunden = JSON.parse(JSON.stringify(window.KALI_DATA.defaultKunden));
+  ops    = JSON.parse(JSON.stringify(window.KALI_DATA.defaultOps));
+  save();
+}
+if (!ops || ops.length === 0) {
+  ops = JSON.parse(JSON.stringify(window.KALI_DATA.defaultOps));
+  save();
+}
+if (kunden && kunden.length) aktuelleId = kunden[0].id;
+if (ops && ops.length) aktuellerOp = ops[0].id;
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Destinations · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+<style>
+.ph{padding:80px 0 40px;text-align:center}
+.ph h1{font-family:Georgia,serif;font-size:40px;font-weight:400;margin-bottom:12px}
+.ph p{font-size:16px;color:#BBBBBB;max-width:540px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;padding:40px 0 80px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;overflow:hidden;text-decoration:none;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:rgba(10,123,131,.4)}
+.ci{height:190px;background-size:cover;background-position:center}
+.cb{padding:18px}
+.cbadge{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0A7B83;margin-bottom:7px}
+.ct{font-family:Georgia,serif;font-size:17px;color:#F5F0E8;line-height:1.3;margin-bottom:9px}
+.cm{display:flex;gap:14px;font-size:12px;color:#BBBBBB}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="wrap" style="padding-top:64px">
+  <div class="ph">
+    <h1>Destinations</h1>
+    <p>Alle Adventure Expeditions Kenia-Touren — kuratiert von KALI Kollektiv.</p>
+  </div>
+  <div class="grid"><a href="13-days-discover-kenya-historic-railway-journey.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">13 Days Discover Kenya Historic Railway Journey</div>
+    <div class="cm"><span>13 Tage</span></div>
+  </div>
+</a><a href="07-days-family-safari-rift-valley-maasai-mara.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">07 Days Family Safari Rift Valley & Maasai Mara</div>
+    <div class="cm"><span>7 Tage</span></div>
+  </div>
+</a><a href="05-days-maasai-mara-flight-safari.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">05 Days Maasai Mara Flight Safari</div>
+    <div class="cm"><span>5 Tage</span></div>
+  </div>
+</a><a href="12-days-immerse-in-life-with-the-tribes.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">12 Days Immerse in Life with the Tribes</div>
+    <div class="cm"><span>12 Tage</span></div>
+  </div>
+</a><a href="10-days-kenya-starter.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Kenya Starter</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="12-days-photographic-safari-kenya.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">12 Days Photographic Safari Kenya</div>
+    <div class="cm"><span>12 Tage</span></div>
+  </div>
+</a><a href="07-days-tour-de-kenya-cycling-safari.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">07 Days Tour de Kenya Cycling Safari</div>
+    <div class="cm"><span>7 Tage</span></div>
+  </div>
+</a><a href="12-days-classic-kenya-safari.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">12 Days Classic Kenya Safari</div>
+    <div class="cm"><span>12 Tage</span></div>
+  </div>
+</a><a href="12-days-across-kenya.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">12 Days across Kenya</div>
+    <div class="cm"><span>12 Tage</span></div>
+  </div>
+</a><a href="05-days-diani-beach-kilele-adventure.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">05 Days Diani Beach Kilele Adventure</div>
+    <div class="cm"><span>5 Tage</span></div>
+  </div>
+</a><a href="05-days-maasai-mara-safari.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">05 Days Maasai Mara Safari</div>
+    <div class="cm"><span>5 Tage</span></div>
+  </div>
+</a><a href="10-days-flying-safari-amboseli-northern-kenya.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Flying Safari Amboseli & Northern Kenya</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="11-days-with-kenya-s-nomads.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">11 Days with Kenya's Nomads</div>
+    <div class="cm"><span>11 Tage</span></div>
+  </div>
+</a><a href="04-days-kayaking-on-ewaso-nyiro-river.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">04 Days Kayaking on Ewaso Nyiro River</div>
+    <div class="cm"><span>4 Tage</span></div>
+  </div>
+</a><a href="10-days-kenya-without-the-crowds.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Kenya Without the Crowds</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="08-days-classic-kenyan-safari-horizons.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">08 Days Classic Kenyan Safari Horizons</div>
+    <div class="cm"><span>8 Tage</span></div>
+  </div>
+</a><a href="05-days-western-kenya.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">05 Days Western Kenya</div>
+    <div class="cm"><span>6 Tage</span></div>
+  </div>
+</a><a href="10-days-swahili-coast-lamu-dreams.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Swahili Coast & Lamu Dreams</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="07-days-lake-turkana-adventure.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">07 Days Lake Turkana Adventure</div>
+    <div class="cm"><span>7 Tage</span></div>
+  </div>
+</a><a href="08-days-laikipia-best-kept-secret.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">08 Days Laikipia Best Kept Secret</div>
+    <div class="cm"><span>8 Tage</span></div>
+  </div>
+</a><a href="10-days-maasai-wedding-and-honeymoon.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Maasai Wedding and Honeymoon</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="07-days-flying-safari-rift-valley-maasai-mara.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">07 Days Flying Safari Rift Valley & Maasai Mara</div>
+    <div class="cm"><span>8 Tage</span></div>
+  </div>
+</a><a href="12-days-family-safari.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">12 Days Family Safari</div>
+    <div class="cm"><span>14 Tage</span></div>
+  </div>
+</a><a href="14-days-explore-the-great-rift-valley-lakes.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">14 Days Explore the Great Rift Valley Lakes</div>
+    <div class="cm"><span>14 Tage</span></div>
+  </div>
+</a><a href="10-days-western-kenya-adventure.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Western Kenya Adventure</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="08-days-kenya-bush-and-north-coast.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">08 Days Kenya Bush and North Coast</div>
+    <div class="cm"><span>8 Tage</span></div>
+  </div>
+</a><a href="08-days-bush-and-beach-diani-and-tsavo.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">08 Days Bush and Beach Diani and Tsavo</div>
+    <div class="cm"><span>8 Tage</span></div>
+  </div>
+</a><a href="04-days-train-safari-to-teita-estate.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">04 Days Train Safari to Teita Estate</div>
+    <div class="cm"><span>4 Tage</span></div>
+  </div>
+</a><a href="10-days-luxury-rail-safari-and-beach-holiday.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">10 Days Luxury Rail Safari and Beach Holiday</div>
+    <div class="cm"><span>10 Tage</span></div>
+  </div>
+</a><a href="12-days-western-kenya-rift-valley.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">12 Days Western Kenya & Rift Valley</div>
+    <div class="cm"><span>12 Tage</span></div>
+  </div>
+</a><a href="14-days-lake-victoria-three-country-circuit.html" class="card">
+  <div class="ci" style="background-image:url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800')"></div>
+  <div class="cb">
+    <div class="cbadge">Adventure Expeditions · Kenia</div>
+    <div class="ct">14 Days Lake Victoria Three-Country Circuit</div>
+    <div class="cm"><span>14 Tage</span></div>
+  </div>
+</a></div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin</footer>
+</body>
+</html>

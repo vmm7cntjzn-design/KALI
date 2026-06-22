@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>08 Days Bush and Beach Diani and Tsavo · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="08 Days Bush and Beach Diani and Tsavo" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>08 Days Bush and Beach Diani and Tsavo</h1>
+    <div class="meta">
+      <span>📅 8 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">This is the perfect combination of beach and bush! Enjoy the dramatic contrasts of the open plains bordered by undulating hills of the vast Tsavo East National Park, home to the famed “man eaters” lions made famous in the movie “the ghost & the darkness” to the dazzling Indian Ocean Coast! This Safari offers both adventures by day and unabashed luxury at night - this is pure African romance under the stars</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>Upon arrival in Kenya, you will be met by our customer service representative who will then assist you to your vehicle for the drive to your beach hotel. Upon arrival enjoy a nonalcoholic welcome drink followed by a short briefing session on your vacation. You can then enjoy the resort or relax on the beach, enjoying a dip in the warm waters of the Indian Ocean.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Ngutuni Wildlife Sanctuary</div><div class='db'>Today we will explore Ngutuni Sanctury / Tsavo East National Park, which together with Tsavo West forms Kenya's largest national park covering almost 22 000 km². Named after the Tsavo River, which flows from west to east, the park is considered one of the strongholds of biodiversity in the world. It is a huge park and guests often have to exercise patience during game viewing, but the rewards are great. The experienced safari guides are familiar with game movements and the seasonal migration routes and times of wildlife in Tsavo. Some of Tsavo East's most popular attractions are Mudanda Rock, Yatta Plateau and Lugard Falls.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Ngutuni Wildlife Sanctuary</div><div class='db'>After breakfast, you will spend the whole day exploring Tsavo on game drives in the park with a picnic lunch stop. The park is famous for its huge herds of elephants which often have a reddish appearance due to their habit of dust bathing in the reddish iron-rich earth that characterises the local area.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>Today, we return to the beach. Depart after breakfast to the coast and spend your day relaxing with various activities at your beach hotel such as enjoying a relaxing massage. If you are feeling more adventurous, book a kite surfing lesson or head out to explore the local reefs on a snorkelling excursion. If you are of a more gentle persuasion, perhaps a boat ride through the nearby mangrove forest to discover all the creatures that call it home may be of interest.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>Optional Excursion: WASINI ISLAND Pick up at your hotel at 07.00 am and drive to the historical small fishing village of Shimoni on the South Coast. You will drive through rural villages, passing tall palm trees and lush greenery. On arrival, a local guide will lead you through the Shimoni caves where slaves were “stored” during the old slave trading days before shipment to the Zanzibar slave market. Then you board a traditional Arab Dhow for a cruise to the Marine Park. As you sail out on the Indian Ocean, there is an approximately 90% chance to spot Dolphins. You snorkel and marvel at the rich marine life where corals, exotic fish and sea plants are protected. You are provided with masks and snorkels and are accompanied by a certified and experienced guide. Assistance is also provided to first-timers. Back on board, you can refresh yourself with fruits and soft drinks. Sail to Wasini Island, where a tropical seafood lunch is waiting for you. The four-course menu includes crab, fish, seaweed, and rice with coconut sauce. You can also opt for a chicken or vegetarian menu. Beer, wine, and soft drinks are included. The restaurant, built on coral architecture and located directly at the shores, overlooks the channel towards Shimoni. After lunch, you have the option to take a discovery stroll through the Island and its Swahili culture, visiting the beautiful coral garden and the mangrove forest. Alternatively, you can relax at the restaurant, enjoying the sea view and the breeze. Return to your hotel around 5 pm. (all activities and fees included)</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>Spend another day enjoying all the resort has to offer such as jet skiing or kite surfing. Enjoy strolling on the beach, relaxing by the pool and enjoying cocktails from the bar. Take advantage of laid back coastal life!</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>There may be time for one last morning refreshing dip in the warm waters of the Indian Ocean and breakfast before you check out and depart for the airport for your return flight home. Please enter your email address and/or telephone number.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 08 Days Bush and Beach Diani and Tsavo" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/74144eed-23ca-41d3-8278-fccccf756af1?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

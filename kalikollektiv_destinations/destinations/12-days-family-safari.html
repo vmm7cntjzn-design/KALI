@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>12 Days Family Safari · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="12 Days Family Safari" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>12 Days Family Safari</h1>
+    <div class="meta">
+      <span>📅 14 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Embark on an unforgettable 14-night journey through the diverse landscapes of Kenya, blending vibrant city life, thrilling wildlife safaris, scenic highlands, and idyllic beach relaxation. Your adventure begins in the bustling capital of Nairobi, before heading to the lush green hills of Sagana. Continue with exciting game viewing in Meru National Park, followed by classic riverine safari experiences in Samburu. Explore the wild beauty of Ngare Ndare Forest and the Laikipia Plateau, enjoy lakeside serenity at Lake Naivasha, and conclude with pure indulgence on the pristine shores of Watamu. This carefully curated itinerary offers the perfect mix of cultural discovery, exciting safaris, and coastal bliss, ending with a convenient drop-off at Mombasa Airport.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Nairobi</div><div class='db'>Karibu and welcome to Kenya! You will be met by one of our representatives and driven to your hotel where you will check in and relax. Depending on when you arrive, there may be time for optional activities such as a Nairobi City Tour or visit to the Giraffe Centre and Karen Blixen Museum (extra cost). Transfer from airport to hotel</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Kenya</div><div class='db'>This morning, after breakfast, you will set out for the Sagana region of Kenya. Just one and a half to two hours from Nairobi, the Sagana River meanders through Kirinyaga country - a true paradise for adventure seekers. Here the water rages wild enough to offer breathtaking rafting tours, while the surrounding cliffs and forests provide a dramatic backdrop. For those thirsting for even more adrenaline, there is a bridge further downstream from which the brave can plunge headfirst into the depths - bungee jumping in the midst of untouched nature.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Meru National Park</div><div class='db'>Early in the morning, you set off towards Meru National Park, crossing the central highlands and the lush farmland of the region. If time allows, you can make spontaneous stops along the way to admire the pineapple, rice, and coffee plantations up close. Your journey takes you over the mighty Tana River, winding its way from the Aberdare Mountains all the way to the Indian Ocean. You then pass through the picturesque Nyabene Hills before arriving in the charming town of Maua, where your safari camp for the night awaits.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Meru National Park</div><div class='db'>Enjoy a hearty breakfast before setting off on a full-day game drive in Meru National Park - including an open-air picnic. Off the beaten track, the park impresses with its lush vegetation, numerous rivers and wild unspoiled nature. The famous lioness Elsa, known from the book and film “Born Free”, lived here - a touching story that led to the founding of the Born Free Foundation, which is still committed to the protection of wild animals, especially lions.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>Today you enter a world of wild beauty - the Samburu National Reserve. In contrast to the lush Masai Mara, Samburu is rougher, drier and more mysterious. The golden sun bathes the landscape in warm ochre tones, while the Ewaso Nyiro River serves as a lifeline - here animals gather to drink, hunt and rest in the shade of the doum palms. Samburu is home to the “Special Five”: the long-necked Gerenuk antelope, the finely striped Grevy's zebra, the elegant reticulated giraffe, the proud Beisa oryx and the exotic-looking Somali ostrich with its blue legs.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>The morning awakens with the gentle murmur of the Ewaso Nyiro, whose life-giving waters characterize the wild savannah. The sun bathes the landscape in warm gold - this is where your journey into untouched nature begins. Elephants leisurely pass by the riverbank, giraffes stretch their necks towards the acacia leaves and, with a bit of luck, the shy leopard can be seen in the shade of the rocks. The river rises in the Aberdares and disappears into the Lorian Swamp - the lifeline of this wild paradise. Samburu is home to the proud Samburu people, known as the “butterfly people” because of their colorful clothing and elaborate beadwork. A visit to the village provides an insight into their centuries-old culture - experience their dances, listen to the stories of the elders and discover handmade souvenirs.</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Ol Pejeta Conservancy</div><div class='db'>After breakfast, your adventure begins in the Ngare Ndare Forest, a lush, untouched forest at the foot of the snow-capped Mount Kenya. The drive there is an experience in itself - past vast savannahs and rolling hills that gradually turn into dense greenery. The forest itself is a magical place where ancient trees, some over 200 years old, tower majestically into the sky. Their dense canopy provides shelter for an amazing variety of birds and wildlife. Rare species such as the bright green and red Hartlaub's Turaco or the mysterious Narina Trogon fly between the branches, while tracks of elephants, buffalo and even leopards can be spotted on the ground. The forest has always served as a natural corridor for herds of elephants that migrate back and forth between the Lewa Wildlife Conservancy and Mount Kenya. A highlight awaits you at a dizzying height: a 450-metre-long suspension bridge that winds its way through the treetops 30 feet above the forest floor.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Ol Pejeta Conservancy</div><div class='db'>From a cattle ranch in colonial times in Kenya to a pioneer of innovative conservation measures - the story of Ol Pejeta is as enchanting as it is inspiring. Today, Ol Pejeta is the largest black rhino sanctuary in East Africa and home to two of the last northern white rhinos in the world. It is the only place in Kenya where you can see chimpanzees, in a sanctuary set up to rehabilitate animals rescued from the black market. It has one of the highest densities of predators in Kenya and still runs a very successful cattle breeding program. Today you have the opportunity to observe the last northern white rhinos and explore the amazing wildlife of the sanctuary on game drives Morning and afternoon game drive Ol Pejeta</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Naivasha</div><div class='db'>After breakfast and check-out, you set off for Lake Naivasha, the first of the Rift Valley lakes, nestled at the foot of the majestic Mount Longonot. Lake Naivasha holds historical significance as the landing site of East Africa’s first air passengers, who arrived here aboard Imperial Airways’ flying boats. Following a leisurely lunch at the camp, you will embark on a charming afternoon boat ride across the lake. This is a perfect opportunity to observe the diverse waterbird species and spot hippos in their natural habitat.</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">Watamu</div><div class='db'>This morning, after breakfast, you will travel back to Nairobi, where you will be dropped at the train station to catch the train to Mombasa. Once in Mombasa, you will be met by a driver and driven to the coastal town of Watamu on the Swahili Coast. Check into your hotel and relax. Train ticket from Nairobi to Mombasa</div></div>
+</div><div class="day">
+  <div class="dn">11</div>
+  <div><div class="dt">Watamu</div><div class='db'>Wake up to the sound of the waves and enjoy a delicious breakfast at the resort. This full day is yours to relax and unwind. Lounge by the pool, walk along the soft white sands, or simply enjoy the resort’s lush gardens and calm ocean views. Watamu offers the perfect blend of serenity and natural beauty for a truly rejuvenating beach escape.</div></div>
+</div><div class="day">
+  <div class="dn">12</div>
+  <div><div class="dt">Watamu</div><div class='db'>You may choose to explore the area with a visit to the Mida Creek mangrove forest, go on a turtle-watching or dolphin-spotting boat trip (extra cost), or simply stay at the resort and enjoy a peaceful day by the sea. The choice is yours in this idyllic beach paradise.</div></div>
+</div><div class="day">
+  <div class="dn">13</div>
+  <div><div class="dt">Watamu</div><div class='db'>Treat yourself to a relaxing spa treatment, take a guided village walk, or continue to unwind on the pristine beach. This is the perfect opportunity to slow down and fully immerse yourself in the tranquil coastal lifestyle.</div></div>
+</div><div class="day">
+  <div class="dn">14</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>This morning, after breakfast, you will check out and be driven back to Mombasa where you will catch your return flight home. Transfer from Watamu to Mombasa</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 12 Days Family Safari" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/3B81CC12-C982-43FD-B390-E6721AA88AA0?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

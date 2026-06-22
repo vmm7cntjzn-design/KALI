@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>14 Days Lake Victoria Three-Country Circuit · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="14 Days Lake Victoria Three-Country Circuit" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>14 Days Lake Victoria Three-Country Circuit</h1>
+    <div class="meta">
+      <span>📅 14 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">This unique 14-day journey takes you on a full circuit around Lake Victoria, combining remote islands, iconic wildlife, and authentic cultural encounters across three countries.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Nairobi</div><div class='db'>Arrive in Nairobi and check into the Trademark Hotel on a bed-and-breakfast basis. After clearing immigration and collecting your luggage you will be met by your driver for the short transfer to the hotel. Settle into your room, perhaps enjoy a swim or a massage at the spa, and take a gentle stroll through the hotel gardens or nearby shopping area if your flight lands early enough. Dinner is at your own leisure—Nairobi has excellent restaurants nearby, or you can dine at the hotel.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Mfangano Island</div><div class='db'>Depart early morning to Mbita / Rusinga Island, Then take the boat and cruise across Lake Victoria to Mfangano Island and Mfangano Camp. The short, scenic boat ride offers wonderful birdwatching and perhaps a glimpse of hippos and crocodiles. Upon arrival at the intimate Mfangano Camp you will be welcomed with a refreshing drink and shown to your private cottage. Spend the day discovering the island’s ancient rock art, visiting a local fishing village, or joining a guided fishing excursion on the lake. Return to camp for a sunset drink on the deck and a superb dinner featuring fresh lake fish.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Mfangano Island</div><div class='db'>Transfer by boat from Mfangano Island to Takawiri Island and Victoria Sands on a full-board basis. The morning transfer is relaxed and picturesque, with time to spot more of Lake Victoria’s wildlife en route. At Takawiri you settle into your luxurious beachfront accommodation and enjoy the private-island atmosphere—swim in the clear waters, lounge on the white-sand beach, or take a guided nature walk through the island’s forests. Afternoon options include a sunset dhow cruise or simply unwinding with a book and a cocktail. Dinner is served on the beach or on your private deck.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Lake Victoria, Kenya</div><div class='db'>Tramsfer by boat to Rusinga Island. Once on the water, the ride to the island is filled with views of fishermen, water birds and the distant hills. Check into your accommodation at Victoria Sands (near Ruma National Park) and enjoy a leisurely lunch. In the afternoon, you can explore Ruma National Park in search of the rare roan antelope and black rhino (on extra costs), or simply relax on the beach with a cold drink. Dinner is served overlooking the lake. Ruma National Park Game drive in the afternoon</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Ikoma</div><div class='db'>Drive to the Migori–Tarime border and cross into Serengeti National Park, continuing into the northern Serengeti. The Serengeti is one of Africa’s most iconic wildlife destinations, famed for its vast plains and the Great Migration, where thousands of wildebeest and zebra move in search of fresh grazing.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Ikoma</div><div class='db'>On the second day in Serengeti National Park, enjoy extended game drives across the vast plains. In the northern Serengeti in particular, following the river systems often leads to large herds of wildebeest and zebr, depending on the season, you may even witness a dramatic river crossing. You’ll also have excellent chances to see predators such as lions and cheetahs in action, while giraffes, elephants, and a variety of antelope species complete the classic savannah scenery.</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Lake Victoria, Tanzania</div><div class='db'>Mwanza is beautifully set on the southern shores of Lake Victoria and is known for its striking granite rock formations that give the city a dramatic and distinctive landscape. As a lively port town, Mwanza offers an authentic glimpse into daily life on the lake, from bustling markets to traditional fishing boats lining the shoreline. A highlight of any visit is a boat tour on Lake Victoria. Gliding past small islands and unique rock outcrops, you experience the lake from a completely different perspective—especially in the early morning or at sunset, when fishermen head out in wooden boats and the light reflects softly on the water.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Burigi Chato National Park</div><div class='db'>Drive to the shores of Lake Victoria and take the ferry to Rubondo Island National Park, a remote and untouched island paradise. Upon arrival, settle into the simple but scenic TANAPA bandas, surrounded by forest and overlooking the lake. During your stay, enjoy a guided bush walk through the island’s lush wilderness, where you may encounter sitatunga antelope, monkeys, and a rich variety of birdlife. Rubondo offers a truly off-the-beaten-track experience, combining raw nature, tranquility, and unique wildlife found nowhere else in Tanzania.</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Burigi Chato National Park</div><div class='db'>A safari in Rubondo Island National Park is very different from the classic savannah experience and feels much more remote and intimate. The island is covered in dense forest, making it ideal for guided walks rather than traditional game drives. Wildlife highlights include sitatunga antelope, which are specially adapted to the island’s swampy areas, as well as bushbuck, vervet monkeys, and the famous chimpanzees that were introduced here as part of a conservation project. While sightings of chimps are not guaranteed, the island is one of the few places in Tanzania where they exist in the wild.</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">Africa</div><div class='db'>Enjoy a homestay experience in Biharamulo District, offering a rare opportunity to connect with local communities and gain insight into traditional ways of life. Spend time with the hosts, learn about daily routines, food preparation, and farming practices, and experience genuine Tanzanian hospitality. During your stay, you will also be introduced to the culture and traditions of the Haya people, one of the main tribes in this region. Through storytelling, music, and shared activities, you gain a deeper understanding of their heritage, beliefs, and close connection to the land.</div></div>
+</div><div class="day">
+  <div class="dn">11</div>
+  <div><div class="dt">Lake Victoria, Uganda</div><div class='db'>Cross the border into Uganda and continue to Masaka, a lively town set in the rolling hills of southern Uganda. Known for its fertile landscapes and welcoming atmosphere, Masaka offers a glimpse into rural Ugandan life, with local markets, small farms, and vibrant roadside scenes along the way.</div></div>
+</div><div class="day">
+  <div class="dn">12</div>
+  <div><div class="dt">Ssese Islands</div><div class='db'>Take the ferry across Lake Victoria to the Ssese Islands and continue to Brovad Sands Lodge, set on a beautiful stretch of sandy beach surrounded by tropical forest. Spend two relaxing days here, enjoying the laid-back island atmosphere.</div></div>
+</div><div class="day">
+  <div class="dn">13</div>
+  <div><div class="dt">Ssese Islands</div><div class='db'>During your stay, you can unwind on the beach, swim in the lake, or explore the island on guided walks through the forest. A range of optional activities is available, including mountain biking, canoeing, visits to nearby caves, a town tour, quad biking, tricycle rides, or jet skiing—allowing you to tailor your stay to be as active or relaxed as you wish.</div></div>
+</div><div class="day">
+  <div class="dn">14</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>After your island stay, return by ferry to the mainland and continue by road to Entebbe for your onward flight home. Enjoy the scenic drive through Uganda’s lush countryside, arriving in time for departure from Entebbe International Airport. Please enter your email address and/or telephone number.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 14 Days Lake Victoria Three-Country Circuit" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/834fad7b-8934-4330-95b5-58763c42edfb?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

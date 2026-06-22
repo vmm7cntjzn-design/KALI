@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>05 Days Western Kenya · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="05 Days Western Kenya" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>05 Days Western Kenya</h1>
+    <div class="meta">
+      <span>📅 6 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Embark on a diverse and immersive 6-day journey through Kenya's natural wonders, starting with a morning departure from Nairobi to Eldoret. The adventure begins with a nature walk and birding at Kaptagat Forest, a vital water catchment for Lake Victoria. Continue to Saiwa Swamp National Park, a haven for nature lovers and home to rare species like the Sitatunga antelope and De Brazza's monkey. Next, explore Mt. Elgon National Park, known for its towering cliffs, caves, and diverse wildlife. Move on to Kakamega Forest for bird watching, hiking, and encounters with unique mammals. The journey then takes you to the shores of Lake Victoria in Kisumu, where an optional day allows exploration of Maragoli Hills or Kapsimotwa Gardens, offering panoramic views and birding opportunities. Conclude the trip with a train ride back to Nairobi, passing through scenic landscapes and historic landmarks. This enriching itinerary combines nature walks, bird watching, and cultural experiences, providing a comprehensive exploration of Kenya's natural and cultural heritage.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Eldoret</div><div class='db'>It's an early start today, leaving Nairobi at 6 am and driving to Eldoret, near Naiberi. Enjoy lunch at the lodge and have some time to relax before an afternoon nature walk at the Kaptagat Forest which is home to many species of birds which will be of particular interest to birders. The Forest is in Elgeyo Marakwet County, and forms part of the larger Cherengany Forest Ecosystem and one of the five water towers in Kenya. Its ecosystem is also an important water catchment for Lake Victoria since all the main streams emanating from it join to form the Sosiani, part of the Lake Victoria watershed. The commonly known streams that commence or pass through the forest are Ndoroti, Kipsinende, Naiberi and Kapkei. The forest is also home to many wild animals such as the Sykes monkeys, antelopes, various species of birds, Rock hyrax etc. Return to the lodge after your walk and enjoy a refreshing dip in the pool. In the evening, enjoy a delicious dinner and the sounds of the African night as you fall asleep.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Kitale</div><div class='db'>After a refreshing breakfast depart with picnic lunches for the Saiwa Swamp National Park, the smallest National Park in Kenya at only 3km². A veritable haven for nature lovers, the Swamp is a forested paradise filled with exotic flowers, trees and birds. It is also the habitat of the rare and endangered semi-aquatic _Sitatunga_ antelope and is a sanctuary for the rare _De Brazza’s_ monkey. Within this tropical wetland and mosaic of riverine forest, bird life is abundant. Water birds include the lesser jacana, grey heron and the African black duck. The forest shelters species such as Narina trogons, the collared and orange-tufted sunbird, the yellow bishop, Hatlaub’s marsh widow bird and the Noisy Ross’s turacos which are difficult to miss. In the late afternoon drive to Kitale Club, a country club and 18-hole golf course, squash courts, clubhouse with snooker and swimming pool and gym.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Kitale</div><div class='db'>Today you will set out for Mount Elgon. The mountain is cloaked in forest and straddles the border between Kenya and Uganda. Mount Elgon is also known as Mount Masaba. Its basalt bluffs have been held sacred to local tribes for centuries. Its highest peak is called Wagagai and is across the border in Uganda. Mount Elgon is the eighth-highest mountain in Africa, famous for its towering cliffs, snaking river valleys, caves, and plunging waterfalls. It is riddled with caves formed from ancient lava tubes, namely Kitum, Makingeny, Chepnyalil, and Ngwarisha. Until recently the caves were used by local communities for traditional religious ceremonies. They are home to a wide range of creatures including bats and spiders. Kitum Cave is regularly visited by herds of elephants, dubbed the troglodyte tuskers, as well as bushbuck, duiker, and buffalo, all in search of the salts that are found in the mineral-rich earth of the cave. The Makingeny Cave, located not far from Kitum, has a spectacular waterfall over its mouth. It is a great spot for game viewing; other than elephants, other commonly sighted animals include leopard, buffalo, waterbuck, olive baboon, giant forest hog, duiker, and black and white Columbus monkey. Additionally, it is an important birding area with more than 240 species sighted. The finest views are from Elephant Platform, a flat outcrop overlooking the northern acacia-filled valley. If lucky, you will spot elephants heading into or out of the caves!</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Kisumu</div><div class='db'>Today you will explore the beautiful Kakamega Forest and enjoy another picnic lunch. Time has stood still for the Kakamega Forest, a remnant of the rainforest that once stretched across Central Africa. This beautiful forest is home to various mammals including bush pigs, giant forest hedgehogs, colobus monkeys, Debrazzar monkeys and pottos. Birds seen here include the blue-headed Bee Eater, Black Billed Turaco, Turner’s Eremomela and Grey Parrots. Bird watching, hiking and rock climbing can be enjoyed here in the serenity of the forest that time forgot. In the afternoon you will drive to the shores of Lake Victoria to Kisumu.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Kisumu</div><div class='db'>Maragoli Hills is the unofficial boundary between Kisumu & Vihiga County. The hills are located just adjacent to the Mungoma caves and offer panoramic scenic views and are great for bird-watching adventures & hiking. It is rocky and steep, but the viewpoint is rewarding when you reach the summit. From the top of the hill, one can see the Nandi Hills, Miwani Plains, Ndere & Maboko Islands on Lake Victoria. Enjoy the distant view of Lake Victoria as it stretches out into the horizon, with expansive vegetation, and a lovely skyline. The view at the top is worth all the sweat broken while climbing. Kapsimotwa Gardens is a serene and secluded site located in the picturesque Nandi Hills, a highland area of lush green rolling hills at the edge of the Great Rift Valley. At about 2000m above sea level, the gardens are part of the Kapsimotwa farm – a huge Tea plantation that dominates the landscape. The farm was established in the 1930s by a British settler called Bushwell. From Kisumu, you go to Awasi and turn off to Chemeli, a picturesque road framed by lots of Jacaranda trees. Drive up the Nandi Hills to Kapsabet and turn in Kapsabet at the High school to the tea factory. Through all the tea plantations you will reach the garden on an easy driveway. Visitors can also tour the tea farms which were planted in the 1950s. They can also visit tea factories nearby and buy the processed leaves to carry home. The huge green tea fields are already so beautiful, but the garden is a jewel.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>You will return by train to Nairobi. The train passes several stations: This part of the train journey takes you through the heart of Kenya’s renown sugar plantation belt. The area is picturesque with the Nandi escarpment forming a great wall to the west and the open plains on the eastern side.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 05 Days Western Kenya" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/f4c92aef-d0e8-4454-9042-c884cebcf7d7?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

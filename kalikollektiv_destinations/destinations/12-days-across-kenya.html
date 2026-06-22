@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>12 Days across Kenya · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="12 Days across Kenya" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>12 Days across Kenya</h1>
+    <div class="meta">
+      <span>📅 12 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Embark on a 12-day adventure through the diverse landscapes and wildlife of Kenya. Begin with a visit to Samburu Game Reserve, experiencing the unique culture of the Samburu people and enjoying game viewing in the rugged hills and plains. Explore the Ngare Ndare Forest, home to a variety of birds and animals, including the elusive colobus monkey. Journey to Lake Nakuru National Park to witness the spectacular flamingo gatherings and the conservation success story of rhinos. Continue to the iconic Maasai Mara Game Reserve, known for its abundant wildlife and the annual wildebeest migration. Immerse yourself in the Swara Plains Wildlife Conservancy, encountering Kenya's majestic animals. Head to Amboseli National Park, framed by the breathtaking Mount Kilimanjaro, for more wildlife encounters and stunning views. Conclude your adventure with exploration of Tsavo East National Park, home to the Big 5 and numerous bird species. The journey ends with a return to Nairobi and departure from the airport.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>Upon arriving at the JKIA in Nairobi in the early morning, you will be met by one of our team and sent on your way to the Samburu Game Reserve in northern Kenya. The arid semi-desert landscape is home to several species not found in the rest of Kenya such as the long-necked gerenuk antelope. This region is the land of the colourful Samburu people, the close relatives of the Maasai. The Samburu are known for their colourful style of dress and beadwork which gives rise to them being called "the butterfly people". The landscape offers a unique view of rounded and rugged hills and undulating plains. The mix of wood and grassland with the forest and wetlands is home to a variety of animals and birds. Lunch is served at the lodge, and later in the afternoon, you go on a game drive in search of the Samburu special five species - gerenuk, Grevys zebra, reticulated giraffe, Somali Ostrich and Besia Oryx.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>Spend the day in the National Reserve on safari enjoying memorable game-viewing encounters. In the dry season, the only source of water in the parched landscape is from the Ewaso Ng'iro River, which rises at the foothills of the Aberdares a few hundred kilometres to the west and disappears over Samburu in the recess of the Lorian swamp. Consequently, wildlife congregates along its banks, making for fabulous game viewing. The birdlife is very diverse with more than 380 recorded species recorded. Other animals commonly seen include giraffes, Grevy's zebras, elephants, oryx, Somalis, hippos, crocodiles, buffaloes, lions, leopards, cheetahs, and hyenas. The long-necked gerenuk gazelle is a graceful antelope that has adapted to the savannah and covers its water needs solely through food intake.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Nanyuki</div><div class='db'>After breakfast, you will drive with a picnic lunch to Ngare Ndare Forest. The forest is a lush indigenous forest at the northern foothills of Mt. Kenya. Azure pools glisten at the bottom of waterfalls and 200-year-old trees stretch into the canopy supporting a rich variety of bird and animal life. The forest is a vital corridor that links the Lewa Wildlife Conservancy and Northern Kenya to the Mount Kenya forest reserve, and one which elephants have been using for centuries. The forest boasts over two hundred species of birds, some being migratory. Rare spectacular birds like Hurtlabs turaco and the Narina trogon can be found here. We also have all the big five and other small animals like bushbucks, waterbucks, warthogs, and hyenas. It is home to the most elusive monkey, the colobus monkey! You can walk along a 450 m long bridge suspended 30 feet above the ground, the longest in East Africa. Enjoy a bird’s eye view of the forest, which ends on a high platform where one can view elephants and other wild animals drinking water from the swamp below. For those with height phobia, this is the place to face your fears. Then you will take the hiking trail in the forest, ending at the waterfalls and azure pools. There are some areas that are quite steep, but manageable. You can rest and swim here. Return to Nanyuki for the night.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Lake Elmenteita</div><div class='db'>Today after breakfast you will head southwards across the Equator down into the Great Rift Valley. Stopping off at Thompson Falls en route you will travel to Lake Elmenteita which is renowned for being home to huge flocks of pink flamingoes which fringe the edges of the lake pink. It is a Ramsar important bird habitat for its many species of waterfowl and forms part of the Great Rift Valley Lakes UNESCO World Heritage site along with Lake Nakuru and Lake Bogoria. Enjoy an afternoon we drive to Lake Nakuru National Park where you will enjoy a game drive to see wildlife such as rhinos, buffalo and lions along the picturesque lake which is home to many waterfowl and sometimes many thousands of flamingoes.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>Today, we continue our thrilling safari adventure in the magnificent Maasai Mara Game Reserve—a place whose name means “spotted plains” in the Maasai language. This breathtaking reserve is home to the largest concentration of big mammals in Africa and is widely regarded as one of the continent’s ultimate wildlife sanctuaries. The vast savannahs and gentle rolling hills provide an unparalleled backdrop for the incredible array of wildlife living here in their natural habitat. The Maasai Mara Game Reserve is also the northern extension of the vast Serengeti-Mara ecosystem, world-famous for the spectacular annual Great Migration. This awe-inspiring natural phenomenon sees thousands of wildebeest, zebras, and gazelles journeying across the plains in search of fresh grazing grounds.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>Today, you have the opportunity to explore this great reserve in depth. You will see elephants, giraffes, prides of lions, and thousands of impalas, topi, and Thomson gazelles. The Mara also offers fabulous birding opportunities with more than 450 species recorded including 57 species of birds of prey. The Mara is the scene of the annual migration of millions of wildebeests from the Serengeti Plains in search of water and fresh grazing. This is one of the greatest natural spectacles on the planet! During your stay in the Mara, you will have the option of enjoying a hot air balloon ride over the Mara where you can float and enjoy a birds-eye view of the migration down below. This is followed by a champagne breakfast in the African bush! What a treat! You can also visit a Maasai village to learn about the way of life of the local people (Options for an extra charge).</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Swara Plains Conservancy</div><div class='db'>Today you drive back through Nairobi and continue to the South of Kenya. The Swara Plains are 36 km from Nairobi and make an ideal stopover where you can enjoy the tranquillity of the African bush. The Conservancy is home to around 3,000 wild animals, and 300 bird species. It is known for its great sightings of cheetahs, giraffes, ostrich, hyenas, and numerous antelope species. Explore the conservancy on foot on walking safaris, on a bike ride, or on day and night game drives.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Kimana</div><div class='db'>After an early breakfast, we will drive from the Swara Plains to Amboseli National Park. The park is known for its beautiful landscape dominated by the snow-capped peak of Mount Kilimanjaro. The park has a mix of dusty landscapes surrounding some oases of lush green swamp. It offers an interesting contrast with its dry and dusty appearance, which can be attributed to the volcanic ash that came out of Kilimanjaro when it last erupted. These lush oases are fed by underground springs from Kilimanjaro's melted snow, filtered through the volcanic rocks. Amboseli is also renowned as the home of some of the last large-tusked elephants on the planet. Seeing these majestic elephants is like seeing a mammoth once more!</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Kimana</div><div class='db'>Spend another day in the park enjoying morning and afternoon game drives. These are great opportunities to see wildlife including zebras, gnus, giraffes, impala, caracal and serval, lions, leopards, cheetahs and buffaloes. There are also more than 400 species of birds, including the bee-eater, kingfisher, African osprey, martial eagle, and pygmy hawk. The park is very scenic with its beautiful springs and excellent views of Mount Kilimanjaro and Mount Meru. The highlight of the park however has to be its majestic herds of elephants!</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">Tsavo East National Park</div><div class='db'>Today we will explore Tsavo East National Park, which together with Tsavo West forms Kenya's largest national park with almost 22 000 km² conserved. Named after the Tsavo River, which flows from west to east, the park is considered one of the strongholds of biodiversity in the world. It is a huge park and guests often have to exercise patience during game viewing, but the rewards are great. The experienced safari guides are familiar with game movements and the seasonal migration routes and times of wildlife in Tsavo. Some of Tsavo East's most popular attractions are Mudanda Rock, Yatta Plateau and Lugard Falls.</div></div>
+</div><div class="day">
+  <div class="dn">11</div>
+  <div><div class="dt">Tsavo East National Park</div><div class='db'>Spend another day in Tsavo, which is home to the famous Big 5, among others. Other sought-after species include hirola, mongoose, giraffe, bat-eared fox, hyrax, Grevy's zebra, pangolin, Sykes monkey, black-faced velvet monkey and dik-dik, to name a few. Over 500 species of birds have been counted in the area, including ostrich, kestrel, starling, weaver bird, kingfisher, buzzard, hornbill, secretary, and heron. Tsavo lions have always been known for not having a mane (even the males), and because of this rarity, many lions have been hunted and killed in Tsavo. Hunting has been banned in Kenya for many years, which means that human-wildlife conflict has to be carefully managed.</div></div>
+</div><div class="day">
+  <div class="dn">12</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>After breakfast, drive through the park back to Nairobi and from there you will be escorted to the airport for your flight home. Please enter your email address and/or telephone number.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 12 Days across Kenya" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/a033ec81-dc67-434b-a256-94e044bcc8e2?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>10 Days Swahili Coast & Lamu Dreams · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="10 Days Swahili Coast & Lamu Dreams" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>10 Days Swahili Coast & Lamu Dreams</h1>
+    <div class="meta">
+      <span>📅 10 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Kenya has 536 km coastline with different culture and landscape. With this tour we will give you a first impression about diversity from Diani Beach near the Tanzanian border to Lamu with it´s amazing Swahili culture. Discover the coast.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>Arrival in Mombasa. Transfer to Diani Beach. Relax at the beach</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>Pick up at your hotel. From here you will go to Ukunda to visit a local market, you can try to bargain for a good price and try local food. After visiting the market, meet some Giriama & Digo drummers who will show you how to play drums. At the end of your local tour, you will visit a bush doctor. The local healer will explain to you the plants and roots growing in Kenya and how to use them for recovery or well-being. The local guide will drop you off back at your hotel.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Diani Beach</div><div class='db'>You will be picked from your hotel at around 7.00 am and drive to Wasini Island along the Mombasa – Lunga Lunga highway, a distance of 100 km, arriving at around 8.30 am. Arrive at Shimoni Jetty where you will board an Arabic dhow and sail for one hour searching for dolphins. Sail to Kisite Marine National Park where you will snorkel and swim among the vibrant coral reefs. Kisite Marine National Park is the second most famous marine park in the World after the Great Barrier Reef. It covers an area of 30km2. Animals seen here include turtles, coral reefs, and a wide variety of fishes. You will have your lunch at a restaurant in Wasini consisting of a mix of freshly caught seafood and Swahili dishes. After lunch, you will sail along the mangrove swamps and visit Wasini Island where you will learn more about the Swahili people and the Arab's history. In the 10th century, Arabs were slave traders and they used to intermarry with the Bantus at the coast which gave rise to the Swahili people. After the end of the slave trade in the 17th century, many Africans settled here so don’t miss the opportunity to learn about the Swahili people. Arrive at the jetty at around 4.00 pm and drive back to the hotel arriving at about 17:30.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Watamu</div><div class='db'>You will be collected from your hotel at around 7.00 am and drive to Mombasa, a distance of 30 km from Diani arriving at around 8.30 am. Visit the Indian temple where you will learn about Hinduism and Lord Swaminarayan and Lord Rama. You will also have the chance to see the elephant tusks located on Moi Avenue, built in 1952 in memory of King George of England. During this time Princess Elizabeth was in Kenya where she became the Queen of England after the death of King George. Visit the Fort Jesus which was built by the Portuguese in 1593 by architects from Goa. It later became the government prison during the British colonial period in 1947. Fort Jesus was named such because the Portuguese were Christians and they sailed in the name of Jesus. It was built mainly for protection and to control the harbour of Mombasa. There arose war between the Arabs and the Portuguese from 1593 - 1729 but many died due to starvation and yellow fever.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Watamu</div><div class='db'>Be picked up from your hotel by your guide. You will then be taken to Malindi to view the ancient buildings and attractions, including Jumaa mosque, village homes, shops, and the Palace. Visit the Vasco da Gama pillar, one of the oldest European monuments in Africa where you will learn the history of the pillar. You will then be taken to experience the beauty of the Mida Creek, 12 square miles of Mangrove forests. The creek makes an incredible transition from the coral reefs of the ocean and is a sanctuary for many birds such as sand plovers, egrets, terns, whimbrels, curlew sandpipers and sanderlings. From there, transfer to visit the remains of a Swahili town called Gedi. Here your guide will tell you about the history of the palace and tombs and the spectacular variety of trees including, combretum, tamarind, baobab, wild Ficus and sterculia. Visit the Watamu Snake Farm where the largest collection of snakes in East Africa is found. Drive back to your hotel.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Watamu</div><div class='db'>Stroll along the soft white sands, take a cool dip in the pool, and simply relax on the beach. In the afternoon your driver will pick you up. A 50-minute drive from Watamu is a small unassuming village with conspicuous baobab trees. The village is called Marafa, but its proximity to the biodiversity-rich Dakatcha woodlands is not its most outstanding feature. That title goes to the Marafa depression, more famously known as Hell’s Kitchen. Hell’s Kitchen is an odd sandstone canyon that might be Kenya’s best-kept secret. The mini canyon is officially known as Hell’s Kitchen. The name comes from the high temperatures for which it is famous. No tours are done during the day as the temperatures reach highs of 50 degrees at some point in the canyon. But we will invite you for a sundowner in this amazing place. In the morning you will drive to Malindi airport and take a short flight to Lamu Island. Lamu Town seems almost ethereal as you approach it from the water, with the shop fronts and mosques creeping out from behind a forest of dhow masts. Up close, the illusion shatters and the town becomes a hive of activity – from the busy waterfront, with heavy carts wheeled to and fro, to the pungent labyrinth of donkey-wide alleyways, along which women whisper by in full-length bui-bui (black cover-all worn by some Islamic women outside the home) and stray cats hunt for scraps. Your nostrils are assaulted with blue smoke from meat grilling over open fires, donkey dung and the organic scent of the cured wooden shutters on houses built of stone and coral. Many visitors call this town – the oldest living town in East Africa, a UNESCO World Heritage Site and arguably the most complete Swahili town in existence – one of the highlights of their trip to Kenya. Spend the next couple of days exploring this amazing island.</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>You will take another short flight to Mombasa for your international flight home. Please enter your email address and/or telephone number.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 10 Days Swahili Coast & Lamu Dreams" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/d8ee71da-8bc2-4fa3-9e3b-cb5e2c9cad52?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

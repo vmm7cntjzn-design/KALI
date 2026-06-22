@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>10 Days Kenya Without the Crowds · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="10 Days Kenya Without the Crowds" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>10 Days Kenya Without the Crowds</h1>
+    <div class="meta">
+      <span>📅 10 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Embark on a captivating 10-day journey through Kenya's diverse landscapes and cultural treasures. The adventure begins in Nairobi, leading to Sagana, where adrenaline awaits with activities like ziplining, kayaking, and rafting at the Getway Resort. The expedition then heads to Meru National Park, known for its untouched beauty and abundant wildlife, offering a unique safari experience at Ikweta Safari Camp. Continue to the Samburu Game Reserve for encounters with Grevy's zebras, elephants, and diverse bird species, finding comfort and hospitality at Samburu Intrepids. Explore the scenic Ngare Ndare Forest, with its captivating canopy walkway and waterfalls, before heading.  Then travel to the Laikipia region, where you have the chance to see rare animals like black leopards and wild dogs. The journey proceeds to Ol Pejeta Conservancy, a haven for wildlife conservation and home to the last northern white rhinos, with accommodation at Serena Sweetwaters. The final day brings a game drive through Ol Pejeta and a return to Nairobi, concluding this remarkable expedition with memories of Kenya's natural wonders and vibrant cultures.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Kenya</div><div class='db'>Pick up early morning at arrival from the airport in Nairobi for drive to Sagana. Sagana is a small commercial metropolis in Kirinyaga District, Central, Kenya. It is along the Nairobi-Nyeri dual carriageway, 100 kilometres north of Nairobi, the capital of Kenya. Its name comes from Kenya's 2nd longest river, Sagana River which is also called Thagana. The metropolis also inspired the rhumba song "Afro mtoto wa Sagana". It´s situated at the threshold of a big undeniable at the southern foot of Mt. Kenya. The metropolis and its environment have a developing hospitality industry alongside the river Sagana with cottages, water sports and different tourist sites being mounted. Today you will enjoy ziplining, kayaking or rafting on the river.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Meru National Park</div><div class='db'>Meru National Park. The morning drive takes you across the Central highlands and through local farmlands – if time allows enjoy impromptu stops for close viewing of pineapple farmlands, coffee plantations as well as rice farms on your way. The drive crosses the mighty Tana River as it snakes its way from the Aberdares to the Indian Ocean. Drive over the picturesque Nyabene hills with its winding roads and wonderful scenery before descending towards Maua town and to the lovely Ikweta Safari Camp. Enjoy lunch and a game drive. The Meru and Kora sister parks feature lush jungles, coursing rivers, verdant swamps, khaki grasslands, and gaunt termite cathedrals all under the sky’s great blue bowl. Little visited and utterly unspoilt, few places are comparable to the remote and rugged atmosphere found here. Visitors can see Grevy's zebras, elephants, Bohor reedbucks, hartebeests, buffalos and more than 427 recorded species of birds</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Meru National Park</div><div class='db'>Wake up to a sumptuous breakfast before heading out for a full day game drive with picnic lunch out in the park. Meru National Park features verdant vegetation and over 12 rivers crisscrossing the expanse of the park. This park is rarely visited and utterly unspoilt with its wonderful and rugged terrain adding to the intrinsic beauty of the park.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>You will travel to the Samburu Game Reserve, home to several species only found north of the equator, in the land of the colourful Samburu, the close relatives of the Maasai. It offers a unique view of rounded and rugged hills and undulating plains. The mix of wood and grassland with the forest and wetlands is home to a variety of animals and birds. Lunch is served at the lodge, and later in the afternoon, you go on a game drive until sunset</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>Spend the day in the National Reserve with unforgettable game viewing. Water in the arid Samburu region comes from the Ewaso Ng'iro River, which rises at the foothills of the Aberdares a few hundred kilometres to the west and disappears over Samburu in the recess of the Lorian swamp. The birdlife is very diverse with more than 380 recorded species, and you can also see giraffes, Grevy's zebras, elephants, oryx, Somalis, hippos, crocodiles, giraffes, buffaloes, lions, leopards, cheetahs, and hyenas. The long-necked giraffe gazelle is a graceful antelope that has adapted to the savannah and covers its water needs solely through food intake</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Laikipia</div><div class='db'>Today you set out for the enchanting Laikipia County. Laikipia is home to some of Africa’s most diverse wildlife populations — and not just the Big Five. Yes, you will find lions, leopards, elephants, buffalo, and even both black and white rhinos here. But it is also one of the few places where you can see Grevy’s zebras, African wild dogs, and the graceful reticulated giraffe. Remarkably, it is the only place on the continent where, with a little luck, you may even encounter the elusive black leopard. What sets Laikipia apart from a national park? Privacy. Most of the land here is made up of private conservancies, which means you won’t be surrounded by 20 other safari vehicles jostling for position when a lion is spotted. It’s just you, your guide, and the wilderness.</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Laikipia</div><div class='db'>The Maasai communities here welcome you with open arms, inviting you to learn about their centuries-old traditions and way of life. One of the most moving experiences is the famous “Singing Wells”: Maasai warriors dig wells to water their cattle, accompanied by melodic songs. The elders carefully read the weather from the skies, and nature provides them with a wealth of medicinal plants whose use and wisdom have been passed down through generations. Those who come here find harmony with nature and are carried away by the soothing tranquility of this pristine landscape.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Ol Pejeta Conservancy</div><div class='db'>After breakfast, drive to Ol Pejeta Conservancy, a beautiful private game reserve and home to rare species such as Beisa oryx, Rothschild's giraffe and black rhino. On the game drive, Africa shows you the whole range of African wildlife such as lions, leopards, cheetahs, elephants, and hippos. Visit the chimpanzees from the Jane Goodall Institute at Sweetwaters Chimpanzee Sanctuary. Other optional activities include bird walks, where you can observe several hundred species, horseback riding and camel riding (surcharge).</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Ol Pejeta Conservancy</div><div class='db'>From a working cattle ranch in colonial Kenya to a trailblazer of conservation innovation - the story of Ol Pejeta is as enchanting as it is inspirational. Today, Ol Pejeta is the largest black rhino sanctuary in East Africa, and home to two of the world’s last remaining northern white rhinos. It is the only place in Kenya to see chimpanzees, in a sanctuary established to rehabilitate animals rescued from the black market. It has some of the highest predator densities in Kenya, and still manages a very successful livestock program. The conservation of the natural habitat, located in Kenya’s Laikipia Plateau, ensured the protection of existing rhino, elephant, and other wildlife populations in addition to captive chimpanzees living in a 300-acre sanctuary.</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>After breakfast, drive through the park back to Nairobi and from there you will be escorted to the airport for your flight home. Please enter your email address and/or telephone number.</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 10 Days Kenya Without the Crowds" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/e2811efe-891b-4a7f-9b75-af0ff52f284f?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>10 Days Western Kenya Adventure · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="10 Days Western Kenya Adventure" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>10 Days Western Kenya Adventure</h1>
+    <div class="meta">
+      <span>📅 10 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Embark on a captivating 10-day journey through Kenya, starting with a city stay at Trademark Hotel in Nairobi. The adventure takes you to the renowned Maasai Mara Game Reserve, where you'll witness the incredible wildlife, including prides of lions and the annual wildebeest migration. Following the Mara, travel to Mbita on Lake Victoria, enjoying a scenic drive through the Rift Valley. Explore Ruma National Park, known for its efforts in conserving the endangered Roan antelope, and experience the cultural richness of Kisumu, including Lake Simbi Nyaima and the Duga Wetlands. Venture to Kakamega Forest for nature walks and bird watching. Game drives in Lake Nakuru National Park and a boat ride on Lake Naivasha to Crescent Island, where you walk among giraffes and zebras.  Conclude the journey with a return to Nairobi, marking the end of this diverse and enriching safari experience.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Nairobi</div><div class='db'>Upon arrival at Jomo Kenyatta International Airport, you will be met by our representative for transfer to your city hotel where you can relax. Meals at own cost.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>After an early breakfast we travel to Maasai Mara Game Reserve, so named to mean the “spotted plains” in Maa language. This is home to the greatest concentration of large mammals and is widely recognized as Africa’s ultimate wildlife reserve. The park is the northern extension of the vast Serengeti-Mara ecosystem, famous for its annual migration of wildebeest. Transfer to the lodge with a game drive en route and after check-in enjoy a hot lunch. Later in the evening enjoy a game drive in this spectacular place of breathtaking scenery, never-ending plains and the most abundant variety of wildlife remaining anywhere in the world. The landscape is made up of rolling savannahs dotted with patchy shrubs and bush thickets. This afternoon, visit the Masai Beadwork Museum to admire the beauty of this ancient craft and learn about the lore and meanings communicated by each piece. You will also visit a traditional Masai village to learn more about their culture and daily life.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Masai Mara</div><div class='db'>During your stay, you have the opportunity to explore this great reserve in depth. You may see elephants, giraffes, prides of lions, and thousands of impalas, topi, grants, and Thomson's gazelle. Birds are prolific including immigrants, 450 bird species have been recorded among them 57 birds of prey. The Mara is the scene of the annual migration of millions of wildebeest up from the Serengeti plains in search of water and grasses. Monring and afternoon game drives in Masai Mara</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Lake Victoria, Kenya</div><div class='db'>Depart after early breakfast for a long drive via Bomet/Sotik to Mbita on Lake Victoria. This drive will take you across the floor of the Rift Valley and over the Ololoolo escarpment into the fertile Western highlands rich with tea and coffee plantations. Enjoy your picnic lunch en-route. Check in and spend the rest of the evening at leisure within the lodge grounds, enjoying the beautiful sundowner over Africa’s largest freshwater lake. Optionally, you can book a boat ride on Lake Victoria - Africa's largest lake! (At Extra cost).</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Lake Victoria, Kenya</div><div class='db'>Set off on an unforgettable day trip to Kenya’s hidden gem, Ruma National Park. After a hearty breakfast and a short drive across scenic countryside, they enter the park’s tranquil landscapes of rolling savannah, acacia woodlands, and dramatic escarpments. Accompanied by an expert guide, the game drive reveals Ruma’s special wildlife: elegant roan antelopes (one of Kenya’s last strongholds for the species), majestic giraffes, buffalo, zebra, and a rich variety of birdlife. Lucky visitors may even spot elusive leopards or the park’s healthy population of lions resting in the shade. As the golden afternoon light bathes the valley, the group makes their way back to Victoria Sands.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Kisumu</div><div class='db'>After breakfast, you continue to Lake Simbi. Lake Simbi Nyaima offers a breathtaking legendary tale, Simbi Nyaima” means the village that sank; it is a seasonal home of migrating flamingos. They arrive from lakes in the Rift Valley region, such as Nakuru, Baringo, Natron and Elementaita every year. You will arrive for lunch at Kiboko Bay and check in your room. In the afternoon, you will go on an excursion to the Duga Wetland, which is a haven for many species of birdlife and is also home to rare Sitatunga antelope. You will also enjoy a walk on the boardwalk above the marsh to take in the views. Lake Simbi and Duga Wetlands visit</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Kisumu</div><div class='db'>Today we will drive an hour away from Kisumu to the last remaining rainforest in Kenya, Kakamega Forest. There are hiking trails in the forest that allow for forest walking, camping, hiking, primate watching, bird and butterfly watching, game watching and village walks. In the afternoon, you return to Kisumu and can have an optional sunset cruise at the lake.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Naivasha</div><div class='db'>Today, you will journey to the enchanting Lake Nakuru National Park, arriving around midday. Nestled within the Great Rift Valley, this park is famed for its vast flocks of pink flamingos that once transformed the lake into a shimmering sea of color. Although the water level is now higher due to climate change, leading to fewer flamingos, the park still offers incredible wildlife experiences—especially the chance to see one of the endangered Big Five: the magnificent rhinoceros. After checking in, you’ll enjoy a delicious lunch before setting out on an exciting afternoon game drive. Along the lake’s edge, you may spot waterbucks, reedbucks, and graceful zebras. Lake Nakuru is home to both black and white rhinoceroses. The story of the black rhino is particularly moving: in 1987, only two individuals remained in the wild. Thanks to the establishment of a rhino sanctuary within the park and a successful breeding program with a partner from Laikipia, the Kenya Wildlife Service managed to bring the population back from the brink of extinction.</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Naivasha</div><div class='db'>After breakfast and check-out, you set off for Lake Naivasha, the first of the Rift Valley lakes, nestled at the foot of the majestic Mount Longonot. Lake Naivasha holds historical significance as the landing site of East Africa’s first air passengers, who arrived here aboard Imperial Airways’ flying boats. Following a leisurely lunch at the camp, you will embark on a charming afternoon boat ride across the lake. This is a perfect opportunity to observe the diverse waterbird species and spot hippos in their natural habitat.</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>After an early breakfast it´s time to depart to Nairobi. Your Safari ends here. Transfer to Jomo Kenyatta International Airport</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 10 Days Western Kenya Adventure" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/3ec34223-1334-489d-ab63-f7b633f561d7?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>

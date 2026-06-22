@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>11 Days with Kenya's Nomads · KALI Kollektiv</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Calibri,sans-serif;background:#0D1B2A;color:#F5F0E8}
+a{color:#0A7B83;text-decoration:none}
+nav{position:sticky;top:0;z-index:99;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(8px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:64px;
+  border-bottom:1px solid rgba(10,123,131,.3)}
+.logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#F5F0E8;letter-spacing:.05em}
+.logo span{color:#0A7B83}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul li a{font-size:12px;font-weight:700;color:#BBBBBB;letter-spacing:.1em;text-transform:uppercase}
+nav ul li a:hover{color:#0A7B83}
+.hero{position:relative;height:70vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,27,42,.1),rgba(13,27,42,.85))}
+.hc{position:absolute;bottom:0;left:0;right:0;padding:48px 64px;z-index:2}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A7B83;border:1px solid #0A7B83;
+  padding:3px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,50px);
+  font-weight:400;line-height:1.15;margin-bottom:14px}
+.meta{display:flex;gap:24px;font-size:13px;color:#BBBBBB;flex-wrap:wrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px}
+section{padding:52px 0;border-bottom:1px solid rgba(245,240,232,.07)}
+section:last-child{border-bottom:none}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:#0A7B83;margin-bottom:16px}
+h2{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px}
+.desc{font-size:15px;line-height:1.8;color:#BBBBBB;max-width:700px}
+.itin{display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:52px 1fr;gap:0 20px;
+  padding:16px 0;border-bottom:1px solid rgba(245,240,232,.05)}
+.day:last-child{border-bottom:none}
+.dn{font-family:Georgia,serif;font-size:22px;color:#0A7B83;padding-top:2px}
+.dt{font-size:14px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.db{font-size:13px;line-height:1.7;color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.inc{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#BBBBBB;line-height:1.5}
+.dot-g{color:#0A7B83;font-size:9px;margin-top:4px;flex-shrink:0}
+.dot-r{color:#ef4444;font-size:9px;margin-top:4px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(10,123,131,.12);border:1px solid rgba(10,123,131,.25);
+  color:#F5F0E8;padding:6px 18px;border-radius:20px;font-size:13px}
+.pbox{background:rgba(10,123,131,.08);border:1px solid rgba(10,123,131,.2);
+  border-radius:12px;padding:28px 36px;display:inline-block}
+.pfrom{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BBBBBB;margin-bottom:8px}
+.pval{font-family:Georgia,serif;font-size:34px;color:#0A7B83}
+.pnote{font-size:12px;color:#64748b;margin-top:8px}
+.cta{text-align:center;padding:64px 0}
+.cta h2{font-family:Georgia,serif;font-size:30px;margin-bottom:12px}
+.cta p{font-size:15px;color:#BBBBBB;margin-bottom:28px}
+.btn{display:inline-block;background:#0A7B83;color:#fff;font-size:14px;
+  font-weight:700;padding:13px 30px;border-radius:6px;margin:4px;transition:background .2s}
+.btn:hover{background:#12a5af}
+.bto{background:transparent;border:2px solid #0A7B83;color:#0A7B83}
+.bto:hover{background:#0A7B83;color:#fff}
+footer{background:rgba(0,0,0,.3);text-align:center;padding:28px;
+  font-size:12px;color:#64748b}
+</style>
+
+<script>
+(function(){
+  var ok = sessionStorage.getItem('kali_auth');
+  if(ok === 'kali2026') return;
+  var p = prompt('KALI Kollektiv — Passwort eingeben:');
+  if(p !== 'kali2026') { document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0D1B2A;color:#F5F0E8;font-family:Georgia,serif;font-size:24px">Zugang verweigert.</div>'; return; }
+  sessionStorage.setItem('kali_auth', p);
+})();
+</script>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/destinations/">KALI <span>KOLLEKTIV</span></a>
+  <ul>
+    <li><a href="/destinations/">Destinations</a></li>
+    <li><a href="mailto:carl@kalikollektiv.de">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1920" alt="11 Days with Kenya's Nomads" loading="eager">
+  <div class="hc">
+    <div class="badge">Adventure Expeditions · Kenia</div>
+    <h1>11 Days with Kenya's Nomads</h1>
+    <div class="meta">
+      <span>📅 11 Tage</span>
+      
+      <span>🇰🇪 Kenia</span>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <section>
+    <div class="lbl">Überblick</div>
+    <h2>Die Reise</h2>
+    <p class="desc">Eine außergewöhnliche Safari-Erfahrung mit Adventure Expeditions.</p>
+  </section>
+  <section><div class='lbl'>Reiseverlauf</div><h2>Tag für Tag</h2><div class='itin'><div class="day">
+  <div class="dn">01</div>
+  <div><div class="dt">Nanyuki</div><div class='db'>Drive early morning to Laikipia. Twala-Tenebo is located on the semi-arid Laikipia plateau, near Mount Kenya in northern Kenya. There, a cooperative of over 200 women from six different Maasai groups coexist with the diverse wildlife and sustain themselves through aloe farming, beadwork, beekeeping and ecotourism - offering authentic Maasai cultural experiences and affordable eco-manyatta accommodations. Twala’ is a Maasai word for a bell. ‘Tenebo’ means come together. In 2007, the “bell rang” as a symbol of calling the Maasai women to action for their capacity enhancement. They joined hands and established a cultural center together. The center works towards empowering women to work for themselves and preserve the rich cultural and historic heritage of the local Maasai people. The women of Twala are involved in agro-tourism as they plant _Aloe secundiflora_ , which they do without using any chemical fertilizers so as to avoid soil and water pollution. They also keep bees for honey production. They use the aloe for the production of natural beauty products and sell them to beauty firms. At Twala, all profits go directly to the community and are utilized for the benefit of poverty reduction and sustainable development. 10% of the income earned in the center goes towards supporting girls’ education. The cultural center also empowers women as they get to work and provide for themselves.</div></div>
+</div><div class="day">
+  <div class="dn">02</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>At Laisamis, there is a vast desert-like sandy valley peering up at the steep peaks and soaring craggy cliffs of the Ndoto Range with Mount Poi standing sentinel. Laisamis Valley is a wildly-beautiful arcadia that’s awe-inspiring not just for its wild rugged and extreme natural beauty found in abundance in this arid block in Kenya, but also for its little known wonders like the plunge pool with a natural rock slide. The road is Tarmak up to Laisamis . Hereyou divert to the west via the Laisamis to Lake Turkana Road and west to Namarei. Untravelled and unchanged till recently, exploring here feels mysterious, delving in a mesmeric unheard world. Travellers can also explore the Ndoto Mountains and Ngurunit River, Camel ride, Natural swimming pools with a slide and Samburu Culture. Overnight at Ngurunit ,an oasis surrounded by tens of mountains and ranges popularly known as the Ndoto.</div></div>
+</div><div class="day">
+  <div class="dn">03</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>In the morning visit the tiny interesting village with captivating traditionally dressed Samburu people living in simple, yet elegantly woven, grass huts and buy some souvenirs. Take a dive in the rockslides. Depart for Loiyangalani through South Horr, We will enjoy amazing sceneries including the wind power project, The first site of Lake Turkana will also be great and the amazing Islands in Lake Turkana.</div></div>
+</div><div class="day">
+  <div class="dn">04</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>The El Molo have found a home in this oasis fed by fresh spring water. For generations, the El Molo regarded as the smallest community on earth have lived, practised their ancient culture, and earned their livelihood in Loyangalani. Drive out and then take a boat ride to the famous El Molo people living on the shores of the lake and are 100% dependent on the lake for survival. They have some merchandise on display and you love them you can support their small economy.</div></div>
+</div><div class="day">
+  <div class="dn">05</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>After an early breakfast we will leave for Sibiloi national park Located on the wild and rugged shores of Lake Turkana – the cradle of mankind - Sibiloi is home to important archaeological sites including Koobi Fora where the fossil remains have contributed to human evolution than any other site. The area is characterized by semi-desert habitat and open plains flanked by volcanic formations including Mount Sibiloi, where the remains of a petrified forest can be seen. Sibiloi serves as a stopover for migrant waterfowl and is a major breeding ground for the Nile crocodile. Sibiloi is surrounded by the Turkana, the Gabra and the Dassanach who are communities with very rich traditional cultures. In the Afternoon visit the petrified forest. Discovered by researchers in the early ’70s, this site of numerous fossilised sections of trees, dates back to prehistoric times. This scrubland was once covered with lakes, rivers and lush rain forest. Powerful torrential rivers carried fallen trees into a vast swampland. The trees sank deep into the morass absorbing sediment and large amounts of the minerals in the water. Over an inordinate amount of time the trees became fossilised and turned into stone. The petrified forest in Sibiloi National Park is definitely one of Kenya’s hidden gems.</div></div>
+</div><div class="day">
+  <div class="dn">06</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>Dicover more of the park today. The Sibiloi National Park was created to protect the fairly recently found fossil sites, that have contributed more to our understanding of human evolution than any other area on the planet so far. The Koobi Fora Region is the centre of archaeological, paleontological and geological interest. The movements of the earth, human origins and mammalian evolution over the last 4 million years have been documented and studied at many sites, but the most exciting part is that there is still a massive land area with fossil exposures that has yet to be explored.</div></div>
+</div><div class="day">
+  <div class="dn">07</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>We will have an early breakfast and depart for North Horr, On the road stop at North Horr Sand dunes. Enjoy the Gus Oasis, North Horr Oasis, the Gabra community and the watering camel site, Continue to Kalacha for overnight at the Kalacha Guesthouse.</div></div>
+</div><div class="day">
+  <div class="dn">08</div>
+  <div><div class="dt">Own Arrangement</div><div class='db'>The journey leads you to a beautiful oasis at the edge of the Chalbi desert which is the largest desert we have in Kenya. The vast landscapes and open desert will amaze you. Chalbi Desert has a lot to offer in picturesque sceneries and tranquil oasis. We later on drive to Marsabi. Sundowner at Lake Paradise at Marsabit NP</div></div>
+</div><div class="day">
+  <div class="dn">09</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>Today you will reach the Samburu National Reserve. This region of Kenya is arid compared to the Masai mara and animals rely on water in the Ewaso Nyiro River to survive. The Reserve is known as the home of the “Special Five” animals which are endemic to the area or are found nowhere else in Kenya. These are the gerenuk antelope (a kind of long-necked impala), Grevy’s Zebra, the reticulated giraffe, the Beisa Oryx, and the blue-legged Somali Ostrich. The park is a great place to spot herds of elephants drinking under the charming forked Doum palms. The park is also a great place to see predators, including prides of lions, coalitions of cheetahs, and if you are lucky elusive leopards. Buffalo are often seen as well as hippos and crocodiles. The Samburu National Reserve is a bird lover's paradise, with over 350 species of birds already counted here. You can see a colorful selection of birds such as vultures, kingfishers, marabous, bateleur, vulturine guinea fowl, and many more.</div></div>
+</div><div class="day">
+  <div class="dn">10</div>
+  <div><div class="dt">Samburu National Reserve</div><div class='db'>Spend the day in the national reserve enjoying unforgettable wildlife viewing. The focus will be on the banks of the Ewaso Nyiro River and its life-saving water. The Ewaso Nyiro River rises at the foothills of the Aberdares a few hundred kilometers to the west and disappears into the depression of the Lorian Swamp above Samburu. Visit the local Samburu villages where you will interact with the colourful Samburu people in their traditional environment and experience their culture. They are known as “the butterfly people” due to their colorful mode of dress with lurid fabrics and many beads. This excursion is a great opportunity to purchase traditional Samburu souvenirs, art and collectibles.</div></div>
+</div><div class="day">
+  <div class="dn">11</div>
+  <div><div class="dt">End of Itinerary</div><div class='db'>Please enter your email address and/or telephone number. Contact Preference Email Phone</div></div>
+</div></div></section>
+  
+  
+  
+  
+  <div class="cta">
+    <div class="lbl">Interesse geweckt?</div>
+    <h2>Reise anfragen</h2>
+    <p>Wir beraten Sie gerne und erstellen ein maßgeschneidertes Angebot.</p>
+    <a href="mailto:carl@kalikollektiv.de?subject=Anfrage: 11 Days with Kenya's Nomads" class="btn">Jetzt anfragen</a>
+    <a href='https://wetu.com/Itinerary/Landing/ba3a8bfe-6a98-4ed5-8964-9bde4993af5b?oid=59542' target='_blank' class='btn bto'>Vollständiges Itinerary</a>
+  </div>
+</div>
+<footer>&copy; 2026 KALI Kollektiv · Beyond the Map · Berlin · carl@kalikollektiv.de</footer>
+</body>
+</html>
