@@ -1,0 +1,13 @@
+/* KALI Homepage — self-contained tokens */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=Anton&display=swap');
+:root{
+  --font-display:'Anton',sans-serif;
+  --font-display-light:'Jost',sans-serif;
+  --font-ui:'Barlow Condensed',sans-serif;
+  --font-body:'Barlow',sans-serif;
+  --ink:#161412;
+  --color-ink:#161412;
+  --color-terracotta:#E89B72;
+  --color-terracotta-d:#D67E50;
+  --color-midnight:#10131C;
+}
