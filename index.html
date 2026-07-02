@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALI Kollektiv — Ostafrika</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  :root {
+    --ease: cubic-bezier(.4,0,.2,1);
+    --ink: #0d0b09;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; }
+  body {
+    background:var(--ink); color:#fff; overflow:hidden;
+    font-family:var(--font-display, Georgia, serif);
+  }
+  .stage { position:fixed; inset:0; overflow:hidden; background:var(--ink); }
+
+  /* Filmische Ebenen (Video + Bilder) teilen dieselbe Sprache */
+  .layer {
+    position:absolute; inset:0; opacity:0;
+    transition:opacity 2.6s var(--ease);
+    will-change:opacity;
+  }
+  .layer { z-index:1; }
+  .layer.show { opacity:1; z-index:2; }
+  #lIntro { transition:opacity 3.2s var(--ease); }
+  .layer > video, .layer > img {
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    transform:scale(1.05); transition:transform 12s linear;
+    filter:saturate(1.1) brightness(1.02) contrast(1.06);
+  }
+  /* Responsive: Nilquelle (Bild 3) — linke Bildhälfte auf Mobile */
+  @media (max-width:768px){
+    .slide[data-cap*="Nilquelle"] > img { object-position:left center; }
+  }
+  .layer .veil {
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(13,11,9,.34) 0%, rgba(13,11,9,.10) 42%, rgba(13,11,9,.60) 100%);
+  }
+
+  /* Bildunterschrift — Buchstaben werden einzeln von links nach rechts eingeblendet */
+  .caption {
+    position:absolute; left:0; right:0; bottom:15vh; z-index:5; text-align:center;
+    padding:0 8vw;
+    font-family:var(--font-display, Georgia, serif); font-weight:400; font-style:normal;
+    font-size:clamp(26px,4.4vw,62px); line-height:1.16; letter-spacing:.012em;
+    color:#fff;
+  }
+  .caption .ch, .word .ch, .presents .ch {
+    display:inline-block; opacity:0; text-shadow:0 3px 30px rgba(0,0,0,.55);
+    transition:opacity 1.6s ease;
+  }
+  .caption.in .ch, .word.in .ch, .presents.in .ch { opacity:1; }
+
+  /* Titel + Abspann-Wort teilen einen Stil */
+  .word {
+    position:absolute; left:0; right:0; text-align:center; z-index:5;
+    font-family:var(--font-display, Georgia, serif); font-weight:400;
+    letter-spacing:.03em; color:#fff;
+  }
+  .word .ch, .presents .ch { text-shadow:0 3px 34px rgba(0,0,0,.6); }
+  #outroWord { top:15vh; font-size:clamp(40px,7.6vw,116px); }
+  #introWord { top:50%; transform:translateY(-50%); font-size:clamp(34px,6.2vw,92px); }
+  .presents {
+    position:absolute; left:0; right:0; text-align:center; z-index:5;
+    top:38%; font-family:var(--font-ui, sans-serif); font-weight:700;
+    font-size:clamp(12px,1.4vw,18px); letter-spacing:.34em; text-transform:uppercase;
+    color:rgba(255,255,255,.88);
+  }
+
+  .mark {
+    position:fixed; top:32px; left:50%; transform:translateX(-50%); z-index:8;
+    font-family:var(--font-ui, sans-serif); font-weight:700; letter-spacing:.52em;
+    font-size:13px; color:rgba(255,255,255,.9); padding-left:.52em;
+    opacity:0; transition:opacity 2.2s var(--ease); text-shadow:0 2px 16px rgba(0,0,0,.6);
+  }
+  .mark.show { opacity:1; }
+
+  .eyebrow {
+    position:fixed; bottom:32px; left:50%; transform:translateX(-50%); z-index:8;
+    font-family:var(--font-ui, sans-serif); font-weight:700; font-size:11px;
+    letter-spacing:.4em; text-transform:uppercase; color:var(--color-terracotta,#C56C40);
+    opacity:0; transition:opacity 2.2s var(--ease);
+  }
+  .eyebrow.show { opacity:1; }
+
+  #replay {
+    position:fixed; bottom:26px; right:28px; z-index:9;
+    font-family:var(--font-ui, sans-serif); font-size:11px; letter-spacing:.22em;
+    text-transform:uppercase; color:rgba(255,255,255,.55); cursor:pointer;
+    background:none; border:1px solid rgba(255,255,255,.25); padding:9px 16px; border-radius:2px;
+    opacity:0; transition:opacity 1s var(--ease);
+  }
+  #replay.show { opacity:1; }
+  #replay:hover { color:#fff; border-color:rgba(255,255,255,.6); }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <!-- Intro-Video -->
+    <div class="layer" id="lIntro">
+      <video id="introVid" muted playsinline preload="auto"><source src="img/intro/vid-src.m4v" type="video/mp4"></video>
+      <div class="veil"></div>
+    </div>
+    <div class="presents" id="introPresents">KALI präsentiert</div>
+    <div class="word" id="introWord">Ein Reise-Curry</div>
+
+    <!-- Bild-Sequenz -->
+    <div class="layer slide" data-cap="von den Virungabergen"><img src="img/intro/1.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="entlang des Grabenbruchs"><img src="Tarangire.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="vorbei an der Nilquelle"><img src="img/intro/3.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="durch den Dschungel"><img src="img/intro/4.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="über die Savannen"><img src="img/intro/5.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="mit exotischen Tieren"><img src="img/intro/6.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="und liebenswerten Menschen"><img src="img/intro/7.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="an die Küste"><img src="img/intro/8.jpg" alt=""><div class="veil"></div></div>
+    <div class="layer slide" data-cap="zu den Archipelen"><img src="img/intro/9.jpg" alt=""><div class="veil"></div></div>
+
+    <!-- Abspann-Video -->
+    <div class="layer" id="lOutro">
+      <video id="outroVid" muted playsinline preload="auto"><source src="img/intro/outro-vid.m4v" type="video/mp4"></video>
+      <div class="veil"></div>
+    </div>
+
+    <div class="caption" id="caption"></div>
+    <div class="word" id="outroWord">…in Ostafrika</div>
+
+    <div class="mark" id="mark">KALI</div>
+    <div class="eyebrow" id="eyebrow">Website in Vorbereitung</div>
+    <button id="replay">Nochmal ansehen</button>
+  </div>
+
+<script>
+(function(){
+  var lIntro = document.getElementById('lIntro');
+  var introVid = document.getElementById('introVid');
+  var lOutro = document.getElementById('lOutro');
+  var outroVid = document.getElementById('outroVid');
+  var slides = Array.from(document.querySelectorAll('.slide'));
+  var caption = document.getElementById('caption');
+  var outroWord = document.getElementById('outroWord');
+  var introWord = document.getElementById('introWord');
+  var introPresents = document.getElementById('introPresents');
+  var mark = document.getElementById('mark');
+  var eyebrow = document.getElementById('eyebrow');
+  var replay = document.getElementById('replay');
+
+  var timers = [];
+  function clearTimers(){ timers.forEach(clearTimeout); timers = []; }
+  function T(fn, ms){ timers.push(setTimeout(fn, ms)); }
+
+  // Cineastisches Timing
+  var HOLD   = 3000;   // Bild steht 3s ruhig
+  var XFADE  = 2600;   // langsame Überblendung
+  var VIDMAX = 9000;   // Intro-Video max. bis Sequenz startet
+  var OUTRO  = 9000;   // Abspann-Video-Dauer
+
+  function showCaption(text){
+    caption.classList.remove('in');
+    wrapLetters(caption, text);
+    void caption.offsetWidth;
+    caption.classList.add('in');
+  }
+  function hideCaption(){ caption.classList.remove('in'); }
+
+  // Buchstaben einzeln einblenden, von links nach rechts
+  function wrapLetters(el, text){
+    el.innerHTML = '';
+    for (var idx=0; idx<text.length; idx++){
+      var ch = text[idx];
+      if (ch === ' ') { el.appendChild(document.createTextNode(' ')); continue; }
+      var span = document.createElement('span');
+      span.className = 'ch';
+      span.textContent = ch;
+      span.style.transitionDelay = (idx*55) + 'ms';
+      el.appendChild(span);
+    }
+  }
+
+  function runSequence(){
+    var t = 0;
+    slides.forEach(function(sl){
+      T(function(){
+        slides.forEach(function(s){ if(s!==sl) s.classList.remove('show'); });
+        sl.classList.add('show');
+        var im = sl.querySelector('img'); if(im) im.style.transform = 'scale(1.16)';
+      }, t);
+      // Text erst 1 Sekunde nach dem Bild
+      T(function(){ showCaption(sl.dataset.cap); }, t + 1000);
+      T(function(){ hideCaption(); }, t + HOLD);
+      t += HOLD + XFADE;
+    });
+    // Übergang in den Abspann-Film
+    T(function(){
+      slides.forEach(function(s){ s.classList.remove('show'); });
+      caption.classList.remove('in');
+      lOutro.classList.add('show');
+      try { outroVid.currentTime = 0; outroVid.play().catch(function(){}); } catch(e){}
+      T(function(){ mark.classList.add('show'); eyebrow.classList.add('show'); }, 700);
+      T(function(){ outroWord.classList.add('in'); }, 900);
+      T(function(){ replay.classList.add('show'); }, OUTRO);
+    }, t + 300);
+  }
+
+  function start(){
+    clearTimers();
+    lIntro.classList.add('show');
+    lOutro.classList.remove('show');
+    outroWord.classList.remove('in');
+    introWord.classList.remove('in');
+    introPresents.classList.remove('in');
+    eyebrow.classList.remove('show');
+    replay.classList.remove('show');
+    mark.classList.remove('show');
+    slides.forEach(function(s){ s.classList.remove('show'); var im=s.querySelector('img'); if(im) im.style.transform='scale(1.05)'; });
+    caption.classList.remove('in','out');
+
+    try { introVid.currentTime = 0; introVid.playbackRate = SLOMO; } catch(e){}
+    var playP = introVid.play();
+    try { introVid.playbackRate = SLOMO; } catch(e){}
+
+    var started = false;
+    function toImages(){
+      if(started) return; started = true;
+      introWord.classList.remove('in');
+      introPresents.classList.remove('in');
+      lIntro.classList.remove('show');
+      // Video läuft während des Ausblendens weiter (weicher Übergang), erst danach pausieren
+      T(function(){ try { introVid.pause(); } catch(e){} }, 3400);
+      T(runSequence, 900);
+    }
+  // Slow-Motion: Intro-Video läuft 30% langsamer und damit ca. 3s länger
+  var SLOMO = 0.7;
+
+  // Intro-Video auf ca. 8 Sekunden begrenzen (Slow-Motion +3s), Rest abschneiden
+  function scheduleSwitch(){
+    var ms = 6000;
+    if(isFinite(introVid.duration) && introVid.duration > 0){
+      var maxMs = (introVid.duration - 0.3) * 1000 / SLOMO;
+      ms = Math.min(6000, maxMs);
+    }
+    T(toImages, ms);
+  }
+    if(introVid.readyState >= 1){ scheduleSwitch(); }
+    else { introVid.addEventListener('loadedmetadata', function(){ try{ introVid.playbackRate = SLOMO; }catch(e){} scheduleSwitch(); }, { once:true }); T(function(){ if(!started) scheduleSwitch(); }, 800); }
+    // Titel erst zeigen, wenn das Video tatsächlich Bilder liefert (nicht auf Schwarz)
+    function showTitles(){
+      T(function(){ if(!started) introPresents.classList.add('in'); }, 500);
+      T(function(){ if(!started) introWord.classList.add('in'); }, 2000);
+    }
+    if(introVid.readyState >= 3 && !introVid.paused){ showTitles(); }
+    else { introVid.addEventListener('playing', showTitles, { once:true }); }
+    if(playP && playP.catch) playP.catch(function(){ toImages(); });
+  }
+
+  replay.addEventListener('click', start);
+  window.addEventListener('load', function(){
+    wrapLetters(introWord, introWord.textContent);
+    wrapLetters(introPresents, introPresents.textContent);
+    wrapLetters(outroWord, outroWord.textContent);
+    start();
+  });
+  wrapLetters(introWord, introWord.textContent);
+  wrapLetters(introPresents, introPresents.textContent);
+  wrapLetters(outroWord, outroWord.textContent);
+  start();
+})();
+</script>
+
+<template id="__bundler_thumbnail" data-bg-color="#0d0b09"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#0d0b09"/></svg></template>
+</body>
+</html>
